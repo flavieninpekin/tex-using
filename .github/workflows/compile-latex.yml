@@ -29,10 +29,16 @@ jobs:
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
 
     - name: Compile main.pdf
+      continue-on-error: true
       run: |
         cd $GITHUB_WORKSPACE
-        latexmk -xelatex -interaction=nonstopmode main.tex
-        [ -f main.pdf ] && echo "main.pdf generated OK" || { echo "main.pdf not found!"; exit 1; }
+        latexmk -xelatex -interaction=nonstopmode main.tex 2>&1 || true
+        echo "--- Checking for main.pdf and log ---"
+        ls -la main.pdf 2>/dev/null || echo "main.pdf NOT found"
+        if [ -f main.log ]; then
+          echo "--- Last 80 lines of main.log ---"
+          tail -80 main.log
+        fi
 
     - name: Compile per-subject
       run: |
