@@ -5,10 +5,12 @@ on:
     branches: [ main ]
     paths:
       - '**.tex'
+      - '.github/workflows/compile-latex.yml'
   pull_request:
     branches: [ main ]
     paths:
       - '**.tex'
+      - '.github/workflows/compile-latex.yml'
   workflow_dispatch:
 
 jobs:
