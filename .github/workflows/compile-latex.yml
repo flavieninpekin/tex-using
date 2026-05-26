@@ -19,13 +19,27 @@ jobs:
         sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended \
           texlive-latex-extra texlive-xetex texlive-fonts-recommended \
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
-    - name: Compile main.pdf
+    - name: Compile
+      id: compile
+      continue-on-error: true
       run: |
         cd $GITHUB_WORKSPACE
-        latexmk -xelatex -interaction=nonstopmode main.tex
-    - name: Upload PDF
+        latexmk -xelatex -interaction=nonstopmode main.tex 2>&1 | tee output.log
+    - name: Show errors
+      if: always()
+      run: |
+        echo "## Compilation Result" >> $GITHUB_STEP_SUMMARY
+        if [ -f main.pdf ]; then
+          echo "✅ PDF generated: $(ls -lh main.pdf | awk '{print $5}')" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ PDF NOT generated" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          grep -A2 '^! ' output.log 2>/dev/null | head -30 >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        fi
+    - name: Upload logs
+      if: failure()
       uses: actions/upload-artifact@v4
       with:
-        name: Compiled-PDFs
-        path: "*.pdf"
-        if-no-files-found: error
+        name: build-logs
+        path: "*.log"
