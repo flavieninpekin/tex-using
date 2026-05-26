@@ -19,14 +19,21 @@ jobs:
         sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended \
           texlive-latex-extra texlive-xetex texlive-fonts-recommended \
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
-    - name: Compile
+    - name: Compile all PDFs
       run: |
         cd $GITHUB_WORKSPACE
-        latexmk -xelatex -interaction=nonstopmode main.tex
-    - name: Upload PDF
+        for f in main.tex math/math-quickref.tex math/math-guide.tex \
+                 math/math-mock-01.tex math/math-mock-02.tex math/math-mock-03.tex; do
+          echo "=== Compiling $f ==="
+          latexmk -xelatex -interaction=nonstopmode "$f" 2>&1 | tail -5
+          echo ""
+        done
+    - name: Upload PDFs
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: Compiled-PDFs
-        path: "*.pdf"
+        path: |
+          *.pdf
+          math/*.pdf
         if-no-files-found: warn

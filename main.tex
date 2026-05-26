@@ -1,15 +1,11 @@
 \documentclass[12pt,a4paper]{ctexbook}
 \usepackage{geometry}
 \geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{enumitem,array,booktabs,pifont}
-\usepackage{hyperref,fancyhdr,bookmark}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref,fancyhdr}
 
 \setlength{\headheight}{14.5pt}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[C]{\leftmark}
-\fancyfoot[C]{\thepage}
 \title{\textbf{湖南高考备考资料}}
 \author{flavieninpekin}
 \date{}
@@ -19,6 +15,14 @@
 \tableofcontents
 
 \part{数学}
-\input{math/math-guide}
+独立文件：
+\begin{itemize}
+  \item \texttt{math/math-quickref.tex} —— 速查速记版
+  \item \texttt{math/math-guide.tex} —— 备考指南版
+  \item \texttt{math/math-mock-01.tex} —— 限时模拟卷一
+  \item \texttt{math/math-mock-02.tex} —— 限时模拟卷二
+  \item \texttt{math/math-mock-03.tex} —— 限时模拟卷三
+\end{itemize}
+各文件可独立编译，互不依赖。
 
 \end{document}
