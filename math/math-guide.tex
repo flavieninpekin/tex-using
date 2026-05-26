@@ -1,0 +1,95 @@
+\documentclass[12pt,a4paper]{ctexbook}
+
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem,array,booktabs,pifont}
+\usepackage{hyperref,fancyhdr}
+\usepackage{bookmark}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+\title{\textbf{数学 · 备考指南}}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+% 时间规划与答题技巧
+\input{"数学/timing-and-tips.tex"}
+
+% 考频分析
+\input{"数学/frequency-analysis.tex"}
+
+% 真题代练
+\input{"数学/guided-practice.tex"}
+
+% 分类训练（答案在本章末尾）
+\appendix
+\chapter{分类训练答案}
+
+\section*{三角恒等变换与解三角形}
+\textbf{1.} $\sin\alpha=\frac35,\alpha\in(\frac{\pi}{2},\pi)\Rightarrow\cos\alpha=-\frac45$，
+$\cos2\alpha=2\cos^2\alpha-1=2\cdot\frac{16}{25}-1=\frac{7}{25}$，
+$\tan(\alpha+\frac{\pi}{4})=\frac{\tan\alpha+1}{1-\tan\alpha}=\frac{-\frac34+1}{1+\frac34}=\frac{\frac14}{\frac74}=\frac17$
+
+\textbf{2.} $\cos B=-\frac17$，正弦定理$\frac{a}{\sin A}=\frac{b}{\sin B}$，
+$\sin B=\sqrt{1-\frac1{49}}=\frac{4\sqrt3}{7}$，
+$\sin A=\frac{a\sin B}{b}=\frac{7\cdot\frac{4\sqrt3}{7}}{8}=\frac{\sqrt3}{2}$，
+$\because b>a\therefore A<\frac{\pi}{2}$，故$A=60^\circ$
+
+\textbf{3.} $\tan\alpha=2$，原式$=\frac{\tan\alpha+1}{\tan\alpha-1}=\frac{2+1}{2-1}=3$
+
+\textbf{4.} $\sin15^\circ+\sin75^\circ=2\sin45^\circ\cos30^\circ=2\cdot\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}=\frac{\sqrt6}{2}$
+
+\textbf{5.} $f(x)=\sin2x+\sqrt3\cos2x=2\sin(2x+\frac{\pi}{3})$，
+增区间$-\frac{\pi}{2}+2k\pi\le 2x+\frac{\pi}{3}\le\frac{\pi}{2}+2k\pi$
+$\Rightarrow -\frac{5\pi}{12}+k\pi\le x\le\frac{\pi}{12}+k\pi$
+
+\textbf{6.} （1）$2b\cos C=2a-c$，余弦定理代入：
+$2b\cdot\frac{a^2+b^2-c^2}{2ab}=2a-c\Rightarrow\frac{a^2+b^2-c^2}{a}=2a-c$ \\
+$\Rightarrow a^2+b^2-c^2=2a^2-ac\Rightarrow b^2=a^2+c^2-ac$ \\
+$\cos B=\frac{a^2+c^2-b^2}{2ac}=\frac{ac}{2ac}=\frac12\Rightarrow B=60^\circ$ \\
+（2）$b=2\sqrt3$，$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{2\sqrt3}{\frac{\sqrt3}{2}}=4$ \\
+$S=\frac12ac\sin B=\frac14(2R)^2\sin A\sin C\sin B=4\sin A\sin(120^\circ-A)$ \\
+当$A=60^\circ$时$S_{\max}=4\cdot\frac{\sqrt3}{2}\cdot\frac{\sqrt3}{2}=3$
+
+\section*{数列}
+\textbf{4.} $a_{n+1}=2a_n+1\Rightarrow a_{n+1}+1=2(a_n+1)$，
+$\{a_n+1\}$是$a_1+1=2$,$q=2$的等比数列，
+$a_n+1=2^n\Rightarrow a_n=2^n-1$
+
+\textbf{5.} （1）$S_{n+1}=4a_n+2$，$S_n=4a_{n-1}+2$，
+相减得$a_{n+1}=4a_n-4a_{n-1}$，
+$a_{n+1}-2a_n=2(a_n-2a_{n-1})$，$\{b_n\}$是$b_1=3$,$q=2$的等比数列 \\
+（2）$b_n=3\cdot2^{n-1}$，$\frac{a_{n+1}}{2^{n+1}}-\frac{a_n}{2^n}=\frac34$，
+$\frac{a_n}{2^n}=\frac12+(n-1)\frac34=\frac{3n-1}{4}$，$a_n=(3n-1)2^{n-2}$
+
+\textbf{6.} $S_n=1-\frac1{n+1}<1$
+
+\textbf{7.} $c_n=(2n-1)2^{n-1}$，错位相减得$S_n=(2n-3)2^n+3$
+
+\section*{立体几何}
+\textbf{1.} $A_1B$与$B_1C$所成角即$A_1B$与$A_1D$所成角，$\triangle A_1BD$中$A_1B=BD=A_1D$，故为$60^\circ$
+
+\section*{概率统计}
+\textbf{1.} （1）$\frac{C_3^1C_2^1}{C_5^2}=\frac{6}{10}=0.6$ \\
+（2）$P(X=0)=\frac{C_2^2}{C_5^2}=0.1$，$P(X=1)=0.6$，$P(X=2)=\frac{C_3^2}{C_5^2}=0.3$ \\
+$E(X)=0.6+0.6=1.2$
+
+\section*{解析几何}
+\textbf{1.} 设$AB:x=my+1$，联立得$(3m^2+4)y^2+6my-9=0$，
+$|y_1-y_2|=\frac{12\sqrt{m^2+1}}{3m^2+4}$，
+$S_{\triangle AOB}=\frac12\cdot1\cdot|y_1-y_2|=\frac{6\sqrt{m^2+1}}{3m^2+4}$，
+当$m^2=\frac43$时$S_{\max}=\frac{\sqrt3}{2}$
+
+\section*{函数与导数}
+\textbf{1.} $f'(x)=3x^2-6x=3x(x-2)$，
+增区间$(-\infty,0),(2,+\infty)$，减区间$(0,2)$，
+极大值$f(0)=1$，极小值$f(2)=-3$
+
+\end{document}

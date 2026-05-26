@@ -5,23 +5,29 @@
 \usepackage{enumitem,array,booktabs,pifont}
 \usepackage{hyperref,fancyhdr,bookmark}
 
-\setlength{\headheight}{14.5pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\leftmark}
 \fancyfoot[C]{\thepage}
-\title{\textbf{湖南高考备考资料}}
-\author{flavieninpekin}
+\title{\textbf{数学 · 高考备考全本}}
 \date{}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
-\part{数学}
+\part{速查速记}
+（独立编译：\texttt{math-quickref.tex}）
+
+\part{备考指南}
 \input{"数学/timing-and-tips.tex"}
 \input{"数学/frequency-analysis.tex"}
 \input{"数学/guided-practice.tex"}
 \input{"数学/categorized-training.tex"}
-\input{math/math-quickref}
+
+\part{限时模拟卷}
+模拟卷一：\texttt{math-mock-01.tex}\\
+模拟卷二：\texttt{math-mock-02.tex}\\
+模拟卷三：\texttt{math-mock-03.tex}\\
+（以上为独立文件，需单独编译）
 \end{document}
