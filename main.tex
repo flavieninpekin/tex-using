@@ -1,8 +1,9 @@
 \documentclass[12pt,a4paper]{ctexbook}
 \usepackage{geometry}
 \geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref,fancyhdr}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem,array,booktabs,pifont}
+\usepackage{hyperref,fancyhdr,bookmark}
 
 \setlength{\headheight}{14.5pt}
 \pagestyle{fancy}
@@ -15,7 +16,7 @@
 \tableofcontents
 
 \part{数学}
-独立文件：
+各文件可独立编译：
 \begin{itemize}
   \item \texttt{math/math-quickref.tex} —— 速查速记版
   \item \texttt{math/math-guide.tex} —— 备考指南版
@@ -23,6 +24,20 @@
   \item \texttt{math/math-mock-02.tex} —— 限时模拟卷二
   \item \texttt{math/math-mock-03.tex} —— 限时模拟卷三
 \end{itemize}
-各文件可独立编译，互不依赖。
+
+\part{语文}
+\input{chinese/chinese}
+
+\part{英语}
+\input{english/english}
+
+\part{物理}
+\input{physics/physics}
+
+\part{化学}
+\input{chemistry/chemistry}
+
+\part{生物}
+\input{biology/biology}
 
 \end{document}

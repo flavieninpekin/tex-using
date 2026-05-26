@@ -1,0 +1,284 @@
+\section{真题代练}
+
+本章精选近年高考真题，按知识点分类，提供完整解析。
+
+\subsection{力学基础}
+
+\textbf{例题 1}（2024·新课标Ⅰ卷）一物体做匀加速直线运动，第 $1\,\text{s}$ 内位移为 $2\,\text{m}$，第 $3\,\text{s}$ 内位移为 $6\,\text{m}$，求物体的加速度和初速度。
+
+\textbf{思路分析}：利用匀变速直线运动相邻相等时间位移差公式 $\Delta x = aT^2$。
+
+\textbf{解析}：
+\[
+\begin{aligned}
+&\text{第 3 s 内与第 1 s 内位移差：} \Delta x = 6 - 2 = 4\,\text{m} \\
+&\text{时间间隔：} T = 1\,\text{s},\quad \Delta x = 2aT^2 \\
+&\Rightarrow a = \frac{\Delta x}{2T^2} = \frac{4}{2\times1^2} = 2\,\text{m/s}^2
+\end{aligned}
+\]
+
+由第 1 s 内位移：
+\[
+x_1 = v_0T + \frac12 aT^2 \Rightarrow 2 = v_0 \times 1 + \frac12 \times 2 \times 1^2 \Rightarrow v_0 = 1\,\text{m/s}
+\]
+
+\textbf{答案}：$a = 2\,\text{m/s}^2$，$v_0 = 1\,\text{m/s}$
+
+\vspace{1em}
+
+\textbf{例题 2}（2023·新课标Ⅰ卷）如图，一质量为 $m$ 的物体静止在倾角为 $\theta$ 的斜面上，物体与斜面间动摩擦因数为 $\mu$。现对物体施加一平行斜面向上的拉力 $F$，使物体沿斜面向上做匀加速直线运动。求：
+\begin{enumerate}
+  \item 物体所受摩擦力的大小和方向
+  \item 物体的加速度 $a$
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 物体沿斜面向上运动，摩擦力方向沿斜面向下
+  \[
+  f = \mu N = \mu mg\cos\theta
+  \]
+  \item 沿斜面方向列牛顿第二定律：
+  \[
+  F - mg\sin\theta - \mu mg\cos\theta = ma
+  \]
+  \[
+  \Rightarrow a = \frac{F}{m} - g(\sin\theta + \mu\cos\theta)
+  \]
+\end{enumerate}
+
+\textbf{答案}：$f = \mu mg\cos\theta$ 方向沿斜面向下；$a = \dfrac{F}{m} - g(\sin\theta + \mu\cos\theta)$
+
+\subsection{曲线运动与万有引力}
+
+\textbf{例题 3}（2024·新课标Ⅰ卷）一小球以初速度 $v_0$ 水平抛出，不计空气阻力，$g = 10\,\text{m/s}^2$。求：
+\begin{enumerate}
+  \item 抛出后 $t$ 秒末的速度大小和方向
+  \item 抛出后 $t$ 秒内的位移大小
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 水平方向：$v_x = v_0$，竖直方向：$v_y = gt$
+  \[
+  v = \sqrt{v_0^2 + (gt)^2},\quad \tan\theta = \frac{v_y}{v_x} = \frac{gt}{v_0}
+  \]
+  \item 水平位移：$x = v_0t$，竖直位移：$y = \frac12 gt^2$
+  \[
+  s = \sqrt{x^2 + y^2} = \sqrt{(v_0t)^2 + \left(\frac12 gt^2\right)^2}
+  \]
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{例题 4}（2023·新课标Ⅰ卷）已知地球半径为 $R$，表面重力加速度为 $g$，万有引力常量为 $G$。求：
+\begin{enumerate}
+  \item 地球的质量 $M$
+  \item 地球的第一宇宙速度 $v_1$
+  \item 距地面高度为 $h$ 的卫星的运行周期 $T$
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 由黄金代换 $GM = gR^2$，得 $M = \dfrac{gR^2}{G}$
+  \item 第一宇宙速度即近地卫星的环绕速度：
+  \[
+  m\frac{v_1^2}{R} = mg \Rightarrow v_1 = \sqrt{gR}
+  \]
+  \item 对高度为 $h$ 的卫星：
+  \[
+  G\frac{Mm}{(R+h)^2} = m\frac{4\pi^2}{T^2}(R+h)
+  \]
+  代入 $GM = gR^2$ 得：
+  \[
+  T = 2\pi\sqrt{\frac{(R+h)^3}{gR^2}}
+  \]
+\end{enumerate}
+
+\subsection{功能关系与动量}
+
+\textbf{例题 5}（2024·新课标Ⅰ卷）一质量为 $m$ 的小球从离地面 $H$ 高处自由下落，与地面碰撞后反弹到离地面 $h$ 高处（$h < H$），设碰撞过程中无机械能损失。求：
+\begin{enumerate}
+  \item 小球落地前瞬间的速度大小
+  \item 小球对地面的平均冲击力大小（已知碰撞时间 $\Delta t$）
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 由机械能守恒：
+  \[
+  mgH = \frac12 mv^2 \Rightarrow v = \sqrt{2gH}
+  \]
+  \item 碰后反弹速度 $v' = \sqrt{2gh}$（方向向上），取向上为正方向
+  \[
+  \text{由动量定理：} (N - mg)\Delta t = mv' - (-mv) = m(v' + v)
+  \]
+  \[
+  N = mg + \frac{m(\sqrt{2gh} + \sqrt{2gH})}{\Delta t}
+  \]
+  由牛顿第三定律，小球对地面的平均冲击力 $F = N$。
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{例题 6}（2023·新课标Ⅰ卷）在光滑水平面上，$A$、$B$ 两球沿同一直线相向运动。$A$ 球质量 $m_A = 2\,\text{kg}$，速度 $v_A = 3\,\text{m/s}$；$B$ 球质量 $m_B = 1\,\text{kg}$，速度 $v_B = -4\,\text{m/s}$。两球发生弹性碰撞，求碰后 $A$ 球和 $B$ 球的速度。
+
+\textbf{解析}：取 $v_A$ 方向为正方向。
+
+动量守恒：
+\[
+m_Av_A + m_Bv_B = m_Av_A' + m_Bv_B'
+\]
+\[
+2\times 3 + 1\times (-4) = 2v_A' + v_B' \Rightarrow 2 = 2v_A' + v_B'
+\]
+
+弹性碰撞动能守恒：
+\[
+\frac12 m_Av_A^2 + \frac12 m_Bv_B^2 = \frac12 m_Av_A'^2 + \frac12 m_Bv_B'^2
+\]
+\[
+\frac12\times2\times9 + \frac12\times1\times16 = \frac12\times2\times v_A'^2 + \frac12\times1\times v_B'^2
+\]
+\[
+17 = v_A'^2 + 0.5 v_B'^2
+\]
+
+代入 $v_B' = 2 - 2v_A'$ 解得：
+\[
+v_A' = \frac{5}{3}\,\text{m/s},\quad v_B' = -\frac{4}{3}\,\text{m/s}
+\]
+
+\textbf{答案}：$v_A' = \dfrac{5}{3}\,\text{m/s}$（方向与原方向相同），$v_B' = -\dfrac{4}{3}\,\text{m/s}$（方向与原 $v_B$ 方向相反）
+
+\subsection{静电场与恒定电流}
+
+\textbf{例题 7}（2024·新课标Ⅰ卷）在匀强电场中，将一电荷量为 $q = 2\times10^{-8}\,\text{C}$ 的正电荷从 $A$ 点移动到 $B$ 点，电场力做功 $W = 4\times10^{-6}\,\text{J}$。已知 $A$、$B$ 两点沿电场线方向的距离 $d = 0.1\,\text{m}$。求：
+\begin{enumerate}
+  \item $A$、$B$ 两点间的电势差 $U_{AB}$
+  \item 匀强电场的电场强度大小 $E$
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item $U_{AB} = \dfrac{W_{AB}}{q} = \dfrac{4\times10^{-6}}{2\times10^{-8}} = 200\,\text{V}$
+  \item $E = \dfrac{U_{AB}}{d} = \dfrac{200}{0.1} = 2000\,\text{V/m}$
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{例题 8}（2023·新课标Ⅰ卷）电路如图所示，电源电动势 $E = 12\,\text{V}$，内阻 $r = 1\,\Omega$，$R_1 = 3\,\Omega$，$R_2 = 6\,\Omega$，$R_3 = 2\,\Omega$。求：
+\begin{enumerate}
+  \item 开关 S 断开时的路端电压
+  \item 开关 S 闭合时通过 $R_1$ 的电流
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item S 断开时，$R_1$ 与 $R_2$ 串联：
+  \[
+  R_{\text{总}} = R_1 + R_2 + r = 3 + 6 + 1 = 10\,\Omega
+  \]
+  \[
+  I = \frac{E}{R_{\text{总}}} = \frac{12}{10} = 1.2\,\text{A}
+  \]
+  \[
+  U = E - Ir = 12 - 1.2\times1 = 10.8\,\text{V}
+  \]
+
+  \item S 闭合时，$R_2$ 与 $R_3$ 并联后再与 $R_1$ 串联：
+  \[
+  R_{23} = \frac{R_2R_3}{R_2+R_3} = \frac{6\times2}{6+2} = 1.5\,\Omega
+  \]
+  \[
+  R_{\text{总}} = R_1 + R_{23} + r = 3 + 1.5 + 1 = 5.5\,\Omega
+  \]
+  \[
+  I = \frac{E}{R_{\text{总}}} = \frac{12}{5.5} \approx 2.18\,\text{A}
+  \]
+  $R_1$ 与干路串联，通过 $R_1$ 的电流 $I_1 = I \approx 2.18\,\text{A}$
+\end{enumerate}
+
+\subsection{磁场与电磁感应}
+
+\textbf{例题 9}（2024·新课标Ⅰ卷）一质量为 $m$、电荷量为 $q$ 的粒子以速度 $v$ 垂直于磁场方向射入磁感应强度为 $B$ 的匀强磁场中，不计重力。求：
+\begin{enumerate}
+  \item 粒子做圆周运动的半径 $R$
+  \item 粒子做圆周运动的周期 $T$
+  \item 若粒子在磁场中运动了半周后从另一点射出，求入射点到出射点的距离
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 洛伦兹力提供向心力：
+  \[
+  qvB = m\frac{v^2}{R} \Rightarrow R = \frac{mv}{qB}
+  \]
+  \item $T = \frac{2\pi R}{v} = \frac{2\pi m}{qB}$
+  \item 半周轨迹为半圆，入射点到出射点的距离为直径：
+  \[
+  d = 2R = \frac{2mv}{qB}
+  \]
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{例题 10}（2023·新课标Ⅰ卷）如图所示，水平放置的两根平行金属导轨相距 $L = 0.5\,\text{m}$，一端接有 $R = 2\,\Omega$ 的电阻。匀强磁场竖直向下，$B = 0.4\,\text{T}$。一质量 $m = 0.1\,\text{kg}$、电阻 $r = 0.5\,\Omega$ 的导体棒 $ab$ 在水平外力 $F$ 作用下以 $v = 4\,\text{m/s}$ 的速度向右匀速滑动。导轨电阻不计，求：
+\begin{enumerate}
+  \item 感应电动势 $\mathcal{E}$
+  \item 通过电阻 $R$ 的电流大小和方向
+  \item 外力 $F$ 的大小
+  \item 电阻 $R$ 上消耗的功率
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item $\mathcal{E} = BLv = 0.4 \times 0.5 \times 4 = 0.8\,\text{V}$
+  \item $I = \dfrac{\mathcal{E}}{R+r} = \dfrac{0.8}{2+0.5} = 0.32\,\text{A}$
+  方向：由右手定则，$b\to a$，通过 $R$ 的电流方向由上向下
+  \item 安培力 $F_A = BIL = 0.4 \times 0.32 \times 0.5 = 0.064\,\text{N}$
+  导体棒匀速，$F = F_A = 0.064\,\text{N}$
+  \item $P_R = I^2R = 0.32^2 \times 2 = 0.2048\,\text{W}$
+\end{enumerate}
+
+\subsection{热学（选修 3--3）}
+
+\textbf{例题 11}（2024·新课标Ⅰ卷）一定质量的理想气体从状态 $A$ 变化到状态 $B$，再变化到状态 $C$，状态变化过程中 $p-V$ 图象如图所示。已知 $A$ 状态参量为 $p_A = 2\times10^5\,\text{Pa}$，$V_A = 2\,\text{L}$，$T_A = 300\,\text{K}$；$A\to B$ 为等温过程，$V_B = 4\,\text{L}$；$B\to C$ 为等容过程，$p_C = 1\times10^5\,\text{Pa}$。求：
+\begin{enumerate}
+  \item $B$ 状态的压强 $p_B$
+  \item $C$ 状态的温度 $T_C$
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item $A\to B$ 等温，由玻意耳定律：
+  \[
+  p_AV_A = p_BV_B \Rightarrow 2\times10^5 \times 2 = p_B \times 4 \Rightarrow p_B = 1\times10^5\,\text{Pa}
+  \]
+  \item $B\to C$ 等容，由查理定律：
+  \[
+  \frac{p_B}{T_B} = \frac{p_C}{T_C},\quad T_B = T_A = 300\,\text{K}
+  \]
+  \[
+  \frac{1\times10^5}{300} = \frac{1\times10^5}{T_C} \Rightarrow T_C = 300\,\text{K} = 27\,^\circ\text{C}
+  \]
+\end{enumerate}
+
+\subsection{光学（选修 3--4）}
+
+\textbf{例题 12}（2024·新课标Ⅰ卷）一束光从空气射入折射率为 $n = \sqrt{2}$ 的介质中，入射角 $i = 45^\circ$。求：
+\begin{enumerate}
+  \item 折射角 $r$
+  \item 光在该介质中的传播速度 $v$
+  \item 该介质对空气的全反射临界角 $C$
+\end{enumerate}
+
+\textbf{解析}：
+\begin{enumerate}
+  \item 由折射定律：
+  \[
+  n = \frac{\sin i}{\sin r} \Rightarrow \sqrt{2} = \frac{\sin45^\circ}{\sin r} = \frac{\sqrt{2}/2}{\sin r} \Rightarrow \sin r = \frac12 \Rightarrow r = 30^\circ
+  \]
+  \item $n = \dfrac{c}{v} \Rightarrow v = \dfrac{c}{n} = \dfrac{3\times10^8}{\sqrt{2}} \approx 2.12\times10^8\,\text{m/s}$
+  \item $\sin C = \dfrac{1}{n} = \dfrac{1}{\sqrt{2}} \Rightarrow C = 45^\circ$
+\end{enumerate}
