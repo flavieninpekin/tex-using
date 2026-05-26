@@ -1,0 +1,175 @@
+\section{应记应背}
+
+\subsection{集合与常用逻辑用语}
+
+\begin{itemize}
+  \item \textbf{集合运算}：$A \cap B = \{x \mid x \in A \text{ 且 } x \in B\}$，$A \cup B = \{x \mid x \in A \text{ 或 } x \in B\}$
+  \item \textbf{摩根律}：$\complement_U(A \cap B) = \complement_U A \cup \complement_U B$，$\complement_U(A \cup B) = \complement_U A \cap \complement_U B$
+  \item \textbf{子集个数}：含 $n$ 个元素的集合有 $2^n$ 个子集，$2^n-1$ 个真子集
+  \item \textbf{量词否定}：$\forall x, p(x)$ 否定为 $\exists x, \lnot p(x)$
+\end{itemize}
+
+\subsection{复数}
+
+\[
+z = a + bi,\quad i^2 = -1,\quad \bar{z} = a - bi,\quad |z| = \sqrt{a^2 + b^2}
+\]
+
+四则运算：
+\[
+(a+bi) \pm (c+di) = (a\pm c) + (b\pm d)i
+\]
+\[
+(a+bi)(c+di) = (ac-bd) + (ad+bc)i
+\]
+\[
+\frac{a+bi}{c+di} = \frac{(a+bi)(c-di)}{c^2+d^2}
+\]
+
+\subsection{不等式}
+
+\begin{itemize}
+  \item \textbf{基本不等式}：$\dfrac{a+b}{2} \ge \sqrt{ab}\;(a,b>0)$，当 $a=b$ 取等
+  \item \textbf{柯西不等式}：$(a^2+b^2)(c^2+d^2) \ge (ac+bd)^2$
+  \item \textbf{绝对值不等式}：$|a|-|b| \le |a\pm b| \le |a|+|b|$
+\end{itemize}
+
+\subsection{函数与导数}
+
+\textbf{导数公式}：
+\[
+\begin{array}{c|c}
+f(x) & f'(x) \\ \hline
+C & 0 \\
+x^n & nx^{n-1} \\
+\sin x & \cos x \\
+\cos x & -\sin x \\
+\tan x & \sec^2 x \\
+a^x & a^x \ln a \\
+e^x & e^x \\
+\log_a x & \dfrac{1}{x\ln a} \\
+\ln x & \dfrac{1}{x}
+\end{array}
+\]
+
+\textbf{运算法则}：
+\[
+(u \pm v)' = u' \pm v',\quad (uv)' = u'v + uv',\quad \left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}
+\]
+
+\textbf{常用切线放缩}：
+\[
+e^x \ge x+1,\quad \ln x \le x-1,\quad \sin x \le x \le \tan x\;(x\ge 0)
+\]
+
+\subsection{三角函数与解三角形}
+
+\textbf{同角关系}：$\sin^2\alpha + \cos^2\alpha = 1$，$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$
+
+\textbf{和差角}：
+\[
+\sin(\alpha\pm\beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta
+\]
+\[
+\cos(\alpha\pm\beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta
+\]
+
+\textbf{二倍角}：
+\[
+\sin2\alpha = 2\sin\alpha\cos\alpha,\quad \cos2\alpha = \cos^2\alpha-\sin^2\alpha = 2\cos^2\alpha-1 = 1-2\sin^2\alpha
+\]
+
+\textbf{辅助角}：
+\[
+a\sin x + b\cos x = \sqrt{a^2+b^2}\,\sin(x+\varphi),\quad \tan\varphi = \frac{b}{a}
+\]
+
+\textbf{解三角形}：
+\[
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+\]
+\[
+a^2 = b^2 + c^2 - 2bc\cos A
+\]
+\[
+S = \frac12 bc\sin A = \frac{abc}{4R}
+\]
+
+\subsection{数列}
+
+\[
+\begin{array}{c|c|c}
+\text{类型} & \text{通项} & \text{前 $n$ 项和} \\ \hline
+\text{等差} & a_n = a_1 + (n-1)d & S_n = \frac{n(a_1+a_n)}{2} \\
+\text{等比} & a_n = a_1 q^{n-1} & S_n = \frac{a_1(1-q^n)}{1-q}\;(q\neq 1)
+\end{array}
+\]
+
+\textbf{裂项相消}：
+\[
+\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1},\quad \frac{1}{(2n-1)(2n+1)} = \frac12\!\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)
+\]
+
+\subsection{平面向量}
+
+\[
+\vec{a}\cdot\vec{b} = x_1x_2 + y_1y_2 = |\vec{a}||\vec{b}|\cos\theta
+\]
+\[
+\vec{a} \perp \vec{b} \iff \vec{a}\cdot\vec{b} = 0,\quad
+\vec{a} \parallel \vec{b} \iff x_1y_2 = x_2y_1
+\]
+
+\subsection{立体几何}
+
+\textbf{空间向量公式}：
+\[
+\sin\theta = \frac{|\vec{v}\cdot\vec{n}|}{|\vec{v}||\vec{n}|},\quad
+\cos\theta = \frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}||\vec{n_2}|},\quad
+d = \frac{|\overrightarrow{AP}\cdot\vec{n}|}{|\vec{n}|}
+\]
+
+\textbf{体积}：
+\[
+V_{\text{柱}} = Sh,\quad V_{\text{锥}} = \frac13 Sh,\quad V_{\text{球}} = \frac43\pi R^3
+\]
+
+\subsection{平面解析几何}
+
+\textbf{圆锥曲线}：
+\[
+\begin{array}{c|c|c|c}
+\text{曲线} & \text{方程} & c^2 & e \\ \hline
+\text{椭圆} & \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 & a^2-b^2 & \frac{c}{a}\in(0,1) \\
+\text{双曲线} & \frac{x^2}{a^2}-\frac{y^2}{b^2}=1 & a^2+b^2 & \frac{c}{a}>1 \\
+\text{抛物线} & y^2=2px & - & 1
+\end{array}
+\]
+
+\textbf{弦长公式}：
+\[
+|AB| = \sqrt{1+k^2}\,|x_1-x_2|
+\]
+
+\subsection{概率与统计}
+
+\textbf{二项分布} $X\sim B(n,p)$：
+\[
+P(X=k)=C_n^k p^k(1-p)^{n-k},\quad E(X)=np,\quad D(X)=np(1-p)
+\]
+
+\textbf{正态分布} $X\sim N(\mu,\sigma^2)$：
+\[
+P(\mu-\sigma<X<\mu+\sigma)\approx 0.6827,\;
+P(\mu-2\sigma<X<\mu+2\sigma)\approx 0.9545,\;
+P(\mu-3\sigma<X<\mu+3\sigma)\approx 0.9973
+\]
+
+\subsection{排列组合与二项式定理}
+
+\[
+A_n^m = \frac{n!}{(n-m)!},\quad C_n^m = \frac{n!}{m!(n-m)!}
+\]
+\[
+(a+b)^n = \sum_{k=0}^n C_n^k a^{n-k}b^k,\quad C_n^0+C_n^1+\cdots+C_n^n = 2^n
+\]

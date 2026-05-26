@@ -1,0 +1,23 @@
+# Compiled LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# PDF output (tracked separately if needed)
+# *.pdf
+
+# Temp files
+*~
+*.swp
+.DS_Store
+Thumbs.db
