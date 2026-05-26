@@ -27,9 +27,24 @@ jobs:
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
 
     - name: Compile main.pdf
+      id: compile_main
+      continue-on-error: true
       run: |
         cd $GITHUB_WORKSPACE
-        latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
+        latexmk -xelatex -interaction=nonstopmode main.tex 2>&1 || true
+        echo "--- LOG FILE ---"
+        if [ -f main.log ]; then
+          grep -i 'error\|warning\|undefined\|! ' main.log | head -50
+        else
+          echo "No main.log found"
+        fi
+
+    - name: Check main compilation status
+      if: steps.compile_main.outcome == 'failure'
+      run: |
+        echo "main.tex compilation failed. Check log above."
+        cat $GITHUB_WORKSPACE/main.log 2>/dev/null | tail -100 || echo "No log available"
+        exit 1
 
     - name: Compile per-subject (standalone documents)
       run: |
@@ -37,16 +52,31 @@ jobs:
         for dir in 数学; do
           if [ -f "$dir/$dir.tex" ] && head -1 "$dir/$dir.tex" | grep -q 'documentclass'; then
             cd "$dir"
-            latexmk -xelatex -interaction=nonstopmode -halt-on-error "$dir.tex" || true
+            latexmk -xelatex -interaction=nonstopmode "$dir.tex" 2>&1 || true
+            echo "--- LOG for $dir ---"
+            if [ -f "$dir.log" ]; then
+              grep -i 'error\|warning\|undefined\|! ' "$dir.log" | head -50
+            fi
             cd ..
           fi
         done
 
     - name: Upload PDF artifacts
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: Compiled-PDFs
         path: |
           *.pdf
           **/*.pdf
+        if-no-files-found: warn
+
+    - name: Upload log files
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: LaTeX-Logs
+        path: |
+          *.log
+          **/*.log
         if-no-files-found: warn
