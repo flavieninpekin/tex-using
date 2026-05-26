@@ -166,3 +166,103 @@
   \item 量纲分析（单位是否一致、结果是否在合理范围）
   \item 与相邻题对比（如果两道题数据有联系，检查是否一致）
 \end{itemize}
+
+\subsection{考前准备与考场策略}
+
+\textbf{考前一周}：
+\begin{itemize}
+  \item 不再追求新题难题，回归公式定理的默写和错题整理
+  \item 每天一套限时选填热身（20 分钟，保持手感）
+  \item 提前准备好考试工具：2B 铅笔、黑色签字笔、直尺圆规、无记忆功能计算器
+\end{itemize}
+
+\textbf{考试当天}：
+\begin{itemize}
+  \item 发卷后先浏览全卷 2 分钟，判断哪些题目是自己熟悉的
+  \item 遇到没见过的题型不要慌，往往是"新瓶装旧酒"
+  \item 草稿纸分区：选择题区、填空题区、解答题区，便于检查
+  \item 最后一题第二问如果有时间，先写"设"和"联立"的基础步骤就有 2--3 分
+\end{itemize}
+
+\subsection{常见失分原因与对策}
+
+\[
+\begin{array}{c|c|c}
+\text{失分原因} & \text{典型场景} & \text{对策} \\ \hline
+\text{计算错误} & 移项忘变号、指数运算错 & 草稿工整、关键步骤复核 \\
+\text{审题偏差} & 漏看条件"$x>0$""$n\in\mathbb{N}^*$" & 圈出关键词再下笔 \\
+\text{分类遗漏} & 二次项系数 $a=0$、斜率不存在 & 分类讨论前先想全所有可能 \\
+\text{公式记混} & 余弦定理写错符号 & 考前默写一遍公式 \\
+\text{规范失分} & 没有写"解"、没有标号 & 每题先写"解"再作答 \\
+\text{时间不足} & 在难题上纠结太久 & 3 分钟原则，果断跳过
+\end{array}
+\]
+
+\subsection{选择题高效答题示范}
+
+\textbf{示范 1：特值法}
+\begin{itemize}
+  \item 题目：$f(x)=\ln(x^2-2x-3)$ 的单调递增区间是？
+  \item 常规：求定义域 $\to$ 求导 $\to$ 解不等式，约 2 分钟
+  \item 特值：$x=0$ 不在定义域，排除含 0 的选项；$x=4$ 代入，函数值大于 $x=3$ 的值$\cdots$
+  \item 30 秒排除 2--3 个选项，剩下验证即可
+\end{itemize}
+
+\textbf{示范 2：数形结合}
+\begin{itemize}
+  \item 题目：方程 $|x^2-2x|=a$ 有三个实数根，求 $a$
+  \item 画 $y=|x^2-2x|$ 的图象（W 型），看水平线 $y=a$ 与图象交 3 个点的位置
+  \item 直接看出 $a=1$
+\end{itemize}
+
+\textbf{示范 3：估算法}
+\begin{itemize}
+  \item 题目：$a=0.3^{0.2}$，$b=0.2^{0.3}$，$c=\log_{0.3}0.2$
+  \item $c=\log_{0.3}0.2 > 1$（因为 $0.2<0.3$），$a,b$ 都在 $(0,1)$
+  \item 比较 $a,b$：$0.3^{0.2}$ vs $0.2^{0.3}$，取对数 $\cdots$ 或凭单调性
+  \item 不用精确计算，只需确定大小顺序
+\end{itemize}
+
+\subsection{解答题六类规范模板速览}
+
+\textbf{三角}：写"解" $\to$ 正弦/余弦定理公式 $\to$ 代入 $\to$ 结果
+\begin{itemize}
+  \item $\frac{a}{\sin A} = \frac{b}{\sin B} \Rightarrow \frac{2}{\sin A} = \frac{3}{\sin 60^\circ} \Rightarrow \sin A = \cdots$
+\end{itemize}
+
+\textbf{数列}：写"解" $\to$ 设基本量 $\to$ 列方程 $\to$ 求通项 $\to$ 求和
+\begin{itemize}
+  \item 设公差为 $d$，由 $\begin{cases} a_1+d=3 \\ a_1+4d=9 \end{cases}$ 得 $a_1=1,d=2$，$a_n=2n-1$
+\end{itemize}
+
+\textbf{立几}：写"解" $\to$ 建系证明 $\to$ 坐标 $\to$ 法向量 $\to$ 公式
+\begin{itemize}
+  \item 以 $A$ 为原点建系 $\cdots$ $\overrightarrow{AB}=(0,2,0)$，$\overrightarrow{AP}=(0,0,2)$ $\cdots$
+\end{itemize}
+
+\textbf{概统}：写"解" $\to$ 设事件 $\to$ 列概率 $\to$ 分布列 $\to$ 期望
+\begin{itemize}
+  \item 设 $X$ 为命中次数，$X\sim B(5,0.8)$，$P(X=k)=C_5^k 0.8^k 0.2^{5-k}$ $\cdots$
+\end{itemize}
+
+\textbf{解几}：写"解" $\to$ 设直线方程（考虑斜率不存在）$\to$ 联立 $\to$ 韦达 $\to$ 条件转化
+\begin{itemize}
+  \item 设 $l:y=kx+1$（$k$ 存在时），联立 $\frac{x^2}{4}+\frac{y^2}{3}=1$ 得 $\cdots$
+\end{itemize}
+
+\textbf{导数}：写"解" $\to$ 求定义域 $\to$ 求导 $\to$ 讨论 $\to$ 结论
+\begin{itemize}
+  \item $f'(x)=\frac1x-a$，$x>0$ $\cdots$ 当 $a\le0$ 时 $f'(x)>0$，$f(x)$ 在 $(0,+\infty)$ 递增 $\cdots$
+\end{itemize}
+
+\subsection{最后 10 分钟检查清单}
+
+\begin{enumerate}
+  \item 选择题答题卡填涂是否与试卷一致
+  \item 填空题是否有化简、是否带单位
+  \item 解答题是否每题都写"解"
+  \item 17--20 题是否完成（这些是基本盘）
+  \item 25 题（导数压轴）第一问是否拿到分
+  \item 草稿纸上的结果是否已誊写到答题卡
+  \item 试卷上的标记是否已擦除干净
+\end{enumerate}
