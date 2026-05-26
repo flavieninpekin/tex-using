@@ -1,17 +1,14 @@
 \documentclass[12pt,a4paper]{ctexbook}
-
 \usepackage{geometry}
 \geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{enumitem,array,booktabs,pifont}
-\usepackage{hyperref,fancyhdr}
-\usepackage{bookmark}
+\usepackage{hyperref,fancyhdr,bookmark}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\leftmark}
 \fancyfoot[C]{\thepage}
-
 \title{\textbf{数学 · 备考指南}}
 \date{}
 
@@ -19,77 +16,166 @@
 \maketitle
 \tableofcontents
 
-% 时间规划与答题技巧
-\input{"数学/timing-and-tips.tex"}
+\chapter{答题时间整体规划与答题技巧}
 
-% 考频分析
-\input{"数学/frequency-analysis.tex"}
+\section{试卷结构速览}
+\begin{center}
+\begin{tabular}{c|c|c|c}
+题型 & 题量 & 分值 & 建议用时 \\ \hline
+单选题 & 8 题 & 40 分 & 25 分钟 \\
+多选题 & 4 题 & 20 分 & 15 分钟 \\
+填空题 & 4 题 & 20 分 & 15 分钟 \\
+解答题 17 题 & 1 题 & 10 分 & 10 分钟 \\
+解答题 18--20 题 & 3 题 & 36 分 & 30 分钟 \\
+解答题 21--22 题 & 2 题 & 24 分 & 25 分钟 \\ \hline
+总计 & 22 题 & 150 分 & 120 分钟
+\end{tabular}
+\end{center}
 
-% 真题代练
-\input{"数学/guided-practice.tex"}
+\section{答题顺序策略}
+\textbf{原则}：先易后难，先熟后生，遇难则跳。\\
+\textbf{推荐顺序}：单选1-6 → 填空13-14 → 解答17-18 → 多选9-10 → 解答19-20 → 单选7-8 → 多选11-12 → 填空15-16 → 解答21 → 解答22 → 检查
 
-% 分类训练（答案在本章末尾）
+\section{选择题技巧}
+\textbf{直接法}：公式直接套用；\textbf{特值法}：取$0,\pm1,\pm2$快速验证；\textbf{排除法}：奇偶性/正负号/定义域排除；\textbf{数形结合}：零点画图、方程根分布；\textbf{估算法}：不精确计算，只比大小
+
+\section{多选题策略}
+核心：\textbf{宁少勿滥}。只选100\%确定的选项，不确定的宁愿不选（2分 vs 丢5分的取舍）
+
+\section{填空题注意}
+无过程分，注意：定义域、多解、$\pm$符号、化简结果、区间开闭
+
+\section{大题踩分要点}
+\textbf{三角}：公式+代入+结果；\textbf{数列}：通项推导+求和；\textbf{立几}：建系+坐标+法向量；\textbf{概统}：分布列+期望公式；\textbf{解几}：联立+韦达+条件转化；\textbf{导数}：求导+讨论+极值
+
+\chapter{高考考频分析}
+
+\section{近五年考点分布}
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+模块 & 2021 & 2022 & 2023 & 2024 & 2025 \\ \hline
+集合 & 5 & 5 & 5 & 5 & 5 \\
+复数 & 5 & 5 & 5 & 5 & 5 \\
+函数与导数 & 27 & 27 & 32 & 32 & 27 \\
+三角与解三角形 & 10 & 10 & 17 & 15 & 10 \\
+数列 & 12 & 17 & 10 & 10 & 12 \\
+向量 & 5 & 5 & 0 & 5 & 5 \\
+立体几何 & 17 & 12 & 17 & 12 & 12 \\
+解析几何 & 17 & 22 & 17 & 17 & 22 \\
+概率统计 & 17 & 17 & 17 & 12 & 17 \\
+排列组合 & 5 & 5 & 5 & 5 & 5
+\end{tabular}
+\end{center}
+
+\section{必考模块分值}
+\begin{itemize}
+  \item 函数与导数：25-32分（选填1-2道+压轴解答）
+  \item 解析几何：17-22分（选填1道+解答21题）
+  \item 立体几何：12-17分（选填1道+解答19题）
+  \item 概率统计：12-17分（选填1道+解答20题）
+  \item 三角、数列：10-17分（交替出现）
+  \item 集合、复数、排列组合：各5分（选填）
+\end{itemize}
+
+\section{命题趋势}
+\begin{enumerate}
+  \item 反套路化——三角和数列交替出现在17/18题
+  \item 情境题增多——概率统计结合实际情境
+  \item 导数难度增加——隐零点、同构、极值点偏移
+  \item 解析几何淡化计算——强化代数转化能力
+  \item 新定义题型出现——考察现场学习能力
+\end{enumerate}
+
+\chapter{真题代练}
+
+\section{集合}
+\textbf{例1}（2024Ⅰ卷）$A=\{x\mid -5<x^3<5\}$，$B=\{-3,-1,0,2,3\}$，$A\cap B=$\\
+解析：$\sqrt[3]{5}\approx1.71$，$A\approx(-1.71,1.71)$，$A\cap B=\{-1,0\}$ \quad 选A
+
+\section{复数}
+\textbf{例2} $z=\frac{1-i}{2+2i}$，求$z-\bar{z}$\\
+解析：$z=-\frac12i$，$\bar{z}=\frac12i$，$z-\bar{z}=-i$ \quad 选A
+
+\section{函数与导数}
+\textbf{例3} $f(x)=\begin{cases}e^x+a,&x\le0\\ \ln(x+1)+x,&x>0\end{cases}$在$\mathbb{R}$上递增，求$a$范围\\
+解析：$a\le0$（衔接处），$a\ge-1$（值域连续性），$\therefore a\in[-1,0]$
+
+\textbf{例4} $a=0.1e^{0.1}$，$b=\frac19$，$c=-\ln0.9$，比大小\\
+解析：$a\approx0.1105$，$b\approx0.1111$，$c\approx0.1054$，$c<a<b$
+
+\section{三角}
+\textbf{例5} $\triangle ABC$中$A+B=3C$，$2\sin(A-C)=\sin B$，$AB=5$，求$\sin A$和$AB$边上高\\
+解析：$C=45^\circ$，$\tan A=3$，$\sin A=\frac{3\sqrt{10}}{10}$，高$=6$
+
+\section{数列}
+\textbf{例6} $a_1=1$，$a_{n+1}=a_n+1$（$n$奇）或$a_n+3$（$n$偶），求$b_n=a_{2n}$及$S_{20}$\\
+解析：$b_n=4n-2$，$S_{20}=300$
+
+\section{概率统计}
+\textbf{例7} 甲命中0.6，乙命中0.8，命则继续，未中则换人。第1次甲乙各0.5，求第2次为乙概率\\
+解析：$P=0.4\times0.5+0.8\times0.5=0.6$
+
+\section{解析几何}
+\textbf{例8} 椭圆$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$右焦点$F$，$M(1,\frac32)$在$E$上且$MF\perp x$轴，过$F$直线交$E$于$A,B$，$N$为$AB$中点，求$ON$斜率最大值\\
+解析：$E:\frac{x^2}{4}+\frac{y^2}{3}=1$，$k_{\max}=\frac{\sqrt3}{4}$
+
+\chapter{分类训练}
+
+\section{三角恒等变换}
+\begin{enumerate}
+  \item[★] $\sin\alpha=\frac35$，$\alpha\in(\frac{\pi}{2},\pi)$，求$\cos2\alpha$和$\tan(\alpha+\frac{\pi}{4})$
+  \item[★] $\triangle ABC$中$a=7,b=8,\cos B=-\frac17$，求$\angle A$
+  \item[★★] $\triangle ABC$中$2b\cos C=2a-c$，求$B$；若$b=2\sqrt3$，求面积最大值
+\end{enumerate}
+
+\section{数列}
+\begin{enumerate}
+  \item[★] 等差$\{a_n\}$中$a_1=1,a_3=5$，求$S_{10}$
+  \item[★] 等比$\{a_n\}$中$a_1=2,a_4=16$，求$a_n$和$S_5$
+  \item[★★] $a_1=1$，$a_{n+1}=2a_n+1$，求$a_n$
+\end{enumerate}
+
+\section{立体几何}
+\begin{enumerate}
+  \item[★] 正方体中求$A_1B$与$B_1C$所成角
+  \item[★★] 四棱锥$P-ABCD$中底面矩形，$PA\perp$底面，$PA=AD=2,AB=3$，$E$为$PD$中点，求二面角$E-AC-B$余弦值
+\end{enumerate}
+
+\section{概率统计}
+\begin{enumerate}
+  \item[★] 3红2白取2球，求恰1红概率和红球数期望
+  \item[★★] 甲胜率0.6乙胜率0.4，三局两胜，求甲获胜概率
+\end{enumerate}
+
+\section{解析几何}
+\begin{enumerate}
+  \item[★] 椭圆$\frac{x^2}{4}+\frac{y^2}{3}=1$，$F$为右焦点，过$F$直线交椭圆于$A,B$，求$\triangle AOB$面积最大值
+  \item[★★] 双曲线$\frac{x^2}{3}-y^2=1$右焦点$F$，过$F$直线交双曲线于$A,B$，若$\overrightarrow{OA}\cdot\overrightarrow{OB}=1$，求$AB$方程
+\end{enumerate}
+
+\section{函数与导数}
+\begin{enumerate}
+  \item[★] $f(x)=x^3-3x^2+1$的单调区间和极值
+  \item[★★] $f(x)=\ln x - a(x-1)$，讨论单调性
+  \item[★★★] $f(x)=e^x-ax-1$，若$f(x)\ge0$恒成立，求$a$
+\end{enumerate}
+
 \appendix
 \chapter{分类训练答案}
-
-\section*{三角恒等变换与解三角形}
-\textbf{1.} $\sin\alpha=\frac35,\alpha\in(\frac{\pi}{2},\pi)\Rightarrow\cos\alpha=-\frac45$，
-$\cos2\alpha=2\cos^2\alpha-1=2\cdot\frac{16}{25}-1=\frac{7}{25}$，
-$\tan(\alpha+\frac{\pi}{4})=\frac{\tan\alpha+1}{1-\tan\alpha}=\frac{-\frac34+1}{1+\frac34}=\frac{\frac14}{\frac74}=\frac17$
-
-\textbf{2.} $\cos B=-\frac17$，正弦定理$\frac{a}{\sin A}=\frac{b}{\sin B}$，
-$\sin B=\sqrt{1-\frac1{49}}=\frac{4\sqrt3}{7}$，
-$\sin A=\frac{a\sin B}{b}=\frac{7\cdot\frac{4\sqrt3}{7}}{8}=\frac{\sqrt3}{2}$，
-$\because b>a\therefore A<\frac{\pi}{2}$，故$A=60^\circ$
-
-\textbf{3.} $\tan\alpha=2$，原式$=\frac{\tan\alpha+1}{\tan\alpha-1}=\frac{2+1}{2-1}=3$
-
-\textbf{4.} $\sin15^\circ+\sin75^\circ=2\sin45^\circ\cos30^\circ=2\cdot\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}=\frac{\sqrt6}{2}$
-
-\textbf{5.} $f(x)=\sin2x+\sqrt3\cos2x=2\sin(2x+\frac{\pi}{3})$，
-增区间$-\frac{\pi}{2}+2k\pi\le 2x+\frac{\pi}{3}\le\frac{\pi}{2}+2k\pi$
-$\Rightarrow -\frac{5\pi}{12}+k\pi\le x\le\frac{\pi}{12}+k\pi$
-
-\textbf{6.} （1）$2b\cos C=2a-c$，余弦定理代入：
-$2b\cdot\frac{a^2+b^2-c^2}{2ab}=2a-c\Rightarrow\frac{a^2+b^2-c^2}{a}=2a-c$ \\
-$\Rightarrow a^2+b^2-c^2=2a^2-ac\Rightarrow b^2=a^2+c^2-ac$ \\
-$\cos B=\frac{a^2+c^2-b^2}{2ac}=\frac{ac}{2ac}=\frac12\Rightarrow B=60^\circ$ \\
-（2）$b=2\sqrt3$，$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{2\sqrt3}{\frac{\sqrt3}{2}}=4$ \\
-$S=\frac12ac\sin B=\frac14(2R)^2\sin A\sin C\sin B=4\sin A\sin(120^\circ-A)$ \\
-当$A=60^\circ$时$S_{\max}=4\cdot\frac{\sqrt3}{2}\cdot\frac{\sqrt3}{2}=3$
-
-\section*{数列}
-\textbf{4.} $a_{n+1}=2a_n+1\Rightarrow a_{n+1}+1=2(a_n+1)$，
-$\{a_n+1\}$是$a_1+1=2$,$q=2$的等比数列，
-$a_n+1=2^n\Rightarrow a_n=2^n-1$
-
-\textbf{5.} （1）$S_{n+1}=4a_n+2$，$S_n=4a_{n-1}+2$，
-相减得$a_{n+1}=4a_n-4a_{n-1}$，
-$a_{n+1}-2a_n=2(a_n-2a_{n-1})$，$\{b_n\}$是$b_1=3$,$q=2$的等比数列 \\
-（2）$b_n=3\cdot2^{n-1}$，$\frac{a_{n+1}}{2^{n+1}}-\frac{a_n}{2^n}=\frac34$，
-$\frac{a_n}{2^n}=\frac12+(n-1)\frac34=\frac{3n-1}{4}$，$a_n=(3n-1)2^{n-2}$
-
-\textbf{6.} $S_n=1-\frac1{n+1}<1$
-
-\textbf{7.} $c_n=(2n-1)2^{n-1}$，错位相减得$S_n=(2n-3)2^n+3$
-
-\section*{立体几何}
-\textbf{1.} $A_1B$与$B_1C$所成角即$A_1B$与$A_1D$所成角，$\triangle A_1BD$中$A_1B=BD=A_1D$，故为$60^\circ$
-
-\section*{概率统计}
-\textbf{1.} （1）$\frac{C_3^1C_2^1}{C_5^2}=\frac{6}{10}=0.6$ \\
-（2）$P(X=0)=\frac{C_2^2}{C_5^2}=0.1$，$P(X=1)=0.6$，$P(X=2)=\frac{C_3^2}{C_5^2}=0.3$ \\
-$E(X)=0.6+0.6=1.2$
-
-\section*{解析几何}
-\textbf{1.} 设$AB:x=my+1$，联立得$(3m^2+4)y^2+6my-9=0$，
-$|y_1-y_2|=\frac{12\sqrt{m^2+1}}{3m^2+4}$，
-$S_{\triangle AOB}=\frac12\cdot1\cdot|y_1-y_2|=\frac{6\sqrt{m^2+1}}{3m^2+4}$，
-当$m^2=\frac43$时$S_{\max}=\frac{\sqrt3}{2}$
-
-\section*{函数与导数}
-\textbf{1.} $f'(x)=3x^2-6x=3x(x-2)$，
-增区间$(-\infty,0),(2,+\infty)$，减区间$(0,2)$，
-极大值$f(0)=1$，极小值$f(2)=-3$
+\textbf{三角1.} $\cos2\alpha=2(-\frac45)^2-1=\frac{7}{25}$，$\tan(\alpha+\frac{\pi}{4})=\frac{-\frac34+1}{1-(-\frac34)}=\frac{\frac14}{\frac74}=\frac17$\\
+\textbf{三角2.} $\sin B=\frac{4\sqrt3}{7}$，$\frac{7}{\sin A}=\frac{8}{4\sqrt3/7}\Rightarrow\sin A=\frac{\sqrt3}{2}$，$\because b>a\therefore A=60^\circ$\\
+\textbf{三角3.} $B=60^\circ$，$S_{\max}=3$\\
+\textbf{数列1.} $d=2$，$S_{10}=100$\\
+\textbf{数列2.} $q=2$，$a_n=2^n$，$S_5=62$\\
+\textbf{数列3.} $a_n=2^n-1$\\
+\textbf{立几1.} $60^\circ$\\
+\textbf{立几2.} $\cos\theta=\frac{3}{\sqrt{13}}$\\
+\textbf{概统1.} $P=\frac35$，$E(X)=1.2$\\
+\textbf{概统2.} $P=0.6^2+2\cdot0.6^2\cdot0.4=0.648$\\
+\textbf{解几1.} $S_{\max}=\sqrt3$\\
+\textbf{解几2.} $x=\pm\sqrt3 y+2$\\
+\textbf{导数1.} 增$(-\infty,0),(2,+\infty)$减$(0,2)$，极$f(0)=1,f(2)=-3$\\
+\textbf{导数2.} $a\le0$时递增；$a>0$时$(0,\frac1a)$增$(\frac1a,+\infty)$减\\
+\textbf{导数3.} $a=1$
 
 \end{document}
