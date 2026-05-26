@@ -6,10 +6,12 @@
 
 ```
 ├── main.tex                 # 主文档（汇总所有科目）
-├── 数学/  ├── 数学.tex       # 独立编译
-│          ├── answer-template.tex
-│          ├── formulas.tex
-│          └── exercises.tex
+├── 数学/  ├── 数学.tex                # 独立编译
+│          ├── formulas.tex            # 常用公式、定理与结论
+│          ├── timing-and-tips.tex     # 答题时间规划与技巧
+│          ├── frequency-analysis.tex  # 高考考频分析
+│          ├── guided-practice.tex     # 真题代练
+│          └── categorized-training.tex  # 分类训练与限时训练
 ├── 语文/  └── 语文.tex       # 待完善
 ├── 英语/  └── 英语.tex       # 待完善
 ├── 物理/  └── 物理.tex       # 待完善
@@ -31,7 +33,7 @@ latexmk -xelatex 数学/数学.tex      # 单科
 
 ## 进度
 
-- [x] 数学 -- 答题模板 + 应记应背 + 真题分类带练
+- [x] 数学 -- 公式定理 + 时间规划与技巧 + 考频分析 + 真题代练 + 分类训练与限时训练
 - [ ] 语文
 - [ ] 英语
 - [ ] 物理

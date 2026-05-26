@@ -1,21 +1,24 @@
-\section{应记应背}
+\section{常用公式、定理与结论}
 
 \subsection{集合与常用逻辑用语}
 
 \begin{itemize}
   \item \textbf{集合运算}：$A \cap B = \{x \mid x \in A \text{ 且 } x \in B\}$，$A \cup B = \{x \mid x \in A \text{ 或 } x \in B\}$
+  \item \textbf{补集}：$\complement_U A = \{x \mid x \in U \text{ 且 } x \notin A\}$
   \item \textbf{摩根律}：$\complement_U(A \cap B) = \complement_U A \cup \complement_U B$，$\complement_U(A \cup B) = \complement_U A \cap \complement_U B$
-  \item \textbf{子集个数}：含 $n$ 个元素的集合有 $2^n$ 个子集，$2^n-1$ 个真子集
-  \item \textbf{量词否定}：$\forall x, p(x)$ 否定为 $\exists x, \lnot p(x)$
+  \item \textbf{子集个数}：含 $n$ 个元素的集合有 $2^n$ 个子集，$2^n-1$ 个真子集，$2^n-2$ 个非空真子集
+  \item \textbf{量词否定}：$\forall x, p(x)$ 否定为 $\exists x, \lnot p(x)$；$\exists x, p(x)$ 否定为 $\forall x, \lnot p(x)$
+  \item \textbf{充分必要条件}：$p \Rightarrow q$ 则 $p$ 是 $q$ 的充分条件，$q$ 是 $p$ 的必要条件
+  \item \textbf{易错}：$\{0\}$ 与 $\varnothing$ 的区别；$0$ 与 $\{0\}$ 的区别；元素与集合用 $\in$，集合与集合用 $\subseteq$
 \end{itemize}
 
 \subsection{复数}
 
 \[
-z = a + bi,\quad i^2 = -1,\quad \bar{z} = a - bi,\quad |z| = \sqrt{a^2 + b^2}
+z = a + bi,\qquad i^2 = -1,\qquad \bar{z} = a - bi,\qquad |z| = \sqrt{a^2 + b^2}
 \]
 
-四则运算：
+\textbf{四则运算}：
 \[
 (a+bi) \pm (c+di) = (a\pm c) + (b\pm d)i
 \]
@@ -26,17 +29,103 @@ z = a + bi,\quad i^2 = -1,\quad \bar{z} = a - bi,\quad |z| = \sqrt{a^2 + b^2}
 \frac{a+bi}{c+di} = \frac{(a+bi)(c-di)}{c^2+d^2}
 \]
 
-\subsection{不等式}
-
+\textbf{常用结论}：
 \begin{itemize}
-  \item \textbf{基本不等式}：$\dfrac{a+b}{2} \ge \sqrt{ab}\;(a,b>0)$，当 $a=b$ 取等
-  \item \textbf{柯西不等式}：$(a^2+b^2)(c^2+d^2) \ge (ac+bd)^2$
-  \item \textbf{绝对值不等式}：$|a|-|b| \le |a\pm b| \le |a|+|b|$
+  \item $i$ 的幂：$i^1 = i,\; i^2 = -1,\; i^3 = -i,\; i^4 = 1$，周期为 4
+  \item $z \cdot \bar{z} = |z|^2$（分母实数化的关键）
+  \item 实系数一元二次方程虚根成对出现（共轭）
+  \item 复数 $z$ 在复平面内对应的点为 $(a,b)$，$|z|$ 为到原点距离
+  \item $|z_1 - z_2|$ 表示复平面上两点间距离
 \end{itemize}
 
-\subsection{函数与导数}
+\subsection{不等式}
 
-\textbf{导数公式}：
+\textbf{基本不等式链}（$a,b>0$）：
+\[
+\frac{2}{\frac{1}{a}+\frac{1}{b}} \le \sqrt{ab} \le \frac{a+b}{2} \le \sqrt{\frac{a^2+b^2}{2}}
+\]
+（调和平均 $\le$ 几何平均 $\le$ 算术平均 $\le$ 平方平均）
+
+\textbf{常用变形}：
+\[
+a^2 + b^2 \ge 2ab,\quad \frac{b}{a} + \frac{a}{b} \ge 2\;(ab>0),\quad a + \frac{1}{a} \ge 2\;(a>0)
+\]
+\[
+\frac{a^2}{b} \ge 2a - b\;(b>0),\quad \sqrt{a^2+b^2} \ge \frac{\sqrt{2}}{2}(a+b)
+\]
+
+\textbf{柯西不等式}：
+\[
+(a_1^2 + a_2^2)(b_1^2 + b_2^2) \ge (a_1b_1 + a_2b_2)^2
+\]
+
+\textbf{绝对值不等式}：
+\[
+|a| - |b| \le |a \pm b| \le |a| + |b|
+\]
+
+\textbf{重要结论}：
+\begin{itemize}
+  \item 一元二次不等式 $ax^2 + bx + c > 0$：$a>0$ 且 $\Delta<0$ 时恒成立
+  \item $ax^2 + bx + c \ge 0$ 恒成立 $\Leftrightarrow$ $a>0$ 且 $\Delta \le 0$
+  \item $|x-a| + |x-b|$ 的最小值为 $|a-b|$
+  \item 线性规划中，目标函数 $z = ax+by$ 的最值在可行域顶点处取到
+\end{itemize}
+
+\subsection{函数}
+
+\textbf{基本初等函数性质}：
+
+\begin{center}
+\begin{tabular}{c|c|c}
+函数 & 定义域 & 性质 \\ \hline
+$y = x^\alpha$ & 视 $\alpha$ 而定 & 过 $(1,1)$\\
+$y = a^x$ & $\mathbb{R}$ & 过 $(0,1)$；$a>1$ 增，$0<a<1$ 减\\
+$y = \log_a x$ & $(0,+\infty)$ & 过 $(1,0)$；$a>1$ 增，$0<a<1$ 减\\
+$y = \sin x$ & $\mathbb{R}$ & 奇，周期 $2\pi$，$[-1,1]$\\
+$y = \cos x$ & $\mathbb{R}$ & 偶，周期 $2\pi$，$[-1,1]$\\
+$y = \tan x$ & $x\neq\frac{\pi}{2}+k\pi$ & 奇，周期 $\pi$\\
+\end{tabular}
+\end{center}
+
+\textbf{函数周期性}——几个常用等价条件：
+\begin{itemize}
+  \item $f(x+a) = f(x) \Rightarrow T = a$
+  \item $f(x+a) = -f(x) \Rightarrow T = 2a$
+  \item $f(x+a) = \dfrac{1}{f(x)} \Rightarrow T = 2a$
+  \item $f(x+a) = \dfrac{1+f(x)}{1-f(x)} \Rightarrow T = 4a$
+\end{itemize}
+
+\textbf{函数对称性}：
+\begin{itemize}
+  \item $f(a+x) = f(a-x) \Leftrightarrow$ 关于 $x=a$ 对称
+  \item $f(a+x) + f(a-x) = 2b \Leftrightarrow$ 关于 $(a,b)$ 对称
+  \item $f(x+a) = f(-x+b) \Leftrightarrow$ 关于 $x=\frac{a+b}{2}$ 对称
+\end{itemize}
+
+\textbf{奇偶性判定}：
+\begin{itemize}
+  \item 奇函数：$f(-x) = -f(x)$，图象关于原点对称
+  \item 偶函数：$f(-x) = f(x)$，图象关于 $y$ 轴对称
+  \item 奇函数 $f(0)=0$（若 $x=0$ 在定义域内）
+  \item 常见奇函数：$\sin x,\;\tan x,\;x^{2n+1},\;\ln\frac{1-x}{1+x},\;\ln(x+\sqrt{1+x^2})$
+  \item 常见偶函数：$\cos x,\;x^{2n},\;|x|$
+\end{itemize}
+
+\textbf{函数图象变换}：
+\[
+\begin{array}{c|c}
+\text{变换} & \text{法则} \\ \hline
+\text{平移} & f(x) \to f(x\pm a),\quad f(x) \to f(x)\pm b \\
+\text{伸缩} & f(x) \to f(\omega x),\quad f(x) \to A f(x) \\
+\text{翻折} & f(x) \to f(|x|),\quad f(x) \to |f(x)| \\
+\text{对称} & f(x) \to f(-x),\quad f(x) \to -f(x),\quad f(x) \to -f(-x)
+\end{array}
+\]
+
+\subsection{导数与微分}
+
+\textbf{基本导数公式}：
 \[
 \begin{array}{c|c}
 f(x) & f'(x) \\ \hline
@@ -45,10 +134,15 @@ x^n & nx^{n-1} \\
 \sin x & \cos x \\
 \cos x & -\sin x \\
 \tan x & \sec^2 x \\
-a^x & a^x \ln a \\
+\cot x & -\csc^2 x \\
+\sec x & \sec x\tan x \\
+a^x & a^x\ln a \\
 e^x & e^x \\
 \log_a x & \dfrac{1}{x\ln a} \\
-\ln x & \dfrac{1}{x}
+\ln x & \dfrac{1}{x} \\
+\arcsin x & \dfrac{1}{\sqrt{1-x^2}} \\
+\arccos x & -\dfrac{1}{\sqrt{1-x^2}} \\
+\arctan x & \dfrac{1}{1+x^2}
 \end{array}
 \]
 
@@ -56,120 +150,364 @@ e^x & e^x \\
 \[
 (u \pm v)' = u' \pm v',\quad (uv)' = u'v + uv',\quad \left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}
 \]
-
-\textbf{常用切线放缩}：
 \[
-e^x \ge x+1,\quad \ln x \le x-1,\quad \sin x \le x \le \tan x\;(x\ge 0)
+\left[f(g(x))\right]' = f'(g(x)) \cdot g'(x) \quad\text{(链式法则)}
+\]
+
+\textbf{常用切线放缩（极重要）}：
+\[
+\begin{array}{c|c}
+\text{不等式} & \text{取等条件} \\ \hline
+e^x \ge x+1 & x = 0 \\
+e^x \ge ex & x = 1 \\
+x+1 \le e^x \le \dfrac{1}{1-x}\;(x<1) & x=0 \\
+\ln x \le x-1 & x = 1 \\
+\ln(1+x) \le x & x = 0 \\
+\ln x \ge 1 - \dfrac{1}{x} & x = 1 \\
+\sin x \le x \le \tan x & x = 0\;(x\ge 0) \\
+\dfrac{x}{1+x} \le \ln(1+x) \le x & x = 0
+\end{array}
+\]
+
+\textbf{常见导数构造}：
+\[
+\begin{array}{c|c}
+\text{条件} & \text{构造函数} \\ \hline
+f'(x) > g'(x) & h(x) = f(x) - g(x) \\
+xf'(x) + f(x) > 0 & h(x) = xf(x) \\
+xf'(x) - f(x) > 0 & h(x) = \dfrac{f(x)}{x} \\
+f'(x) + f(x) > 0 & h(x) = e^x f(x) \\
+f'(x) - f(x) > 0 & h(x) = \dfrac{f(x)}{e^x}
+\end{array}
 \]
 
 \subsection{三角函数与解三角形}
 
-\textbf{同角关系}：$\sin^2\alpha + \cos^2\alpha = 1$，$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$
+\textbf{同角关系}：
+\[
+\sin^2\alpha + \cos^2\alpha = 1,\quad \tan\alpha = \frac{\sin\alpha}{\cos\alpha}
+\]
 
-\textbf{和差角}：
+\textbf{和差角公式}：
 \[
 \sin(\alpha\pm\beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta
 \]
 \[
 \cos(\alpha\pm\beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta
 \]
-
-\textbf{二倍角}：
 \[
-\sin2\alpha = 2\sin\alpha\cos\alpha,\quad \cos2\alpha = \cos^2\alpha-\sin^2\alpha = 2\cos^2\alpha-1 = 1-2\sin^2\alpha
+\tan(\alpha\pm\beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
 \]
 
-\textbf{辅助角}：
+\textbf{二倍角公式}：
+\[
+\sin2\alpha = 2\sin\alpha\cos\alpha
+\]
+\[
+\cos2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha
+\]
+\[
+\tan2\alpha = \frac{2\tan\alpha}{1-\tan^2\alpha}
+\]
+
+\textbf{降幂公式}（高频）：
+\[
+\sin^2\alpha = \frac{1 - \cos2\alpha}{2},\quad \cos^2\alpha = \frac{1 + \cos2\alpha}{2},\quad \sin\alpha\cos\alpha = \frac12\sin2\alpha
+\]
+
+\textbf{辅助角公式}（高频）：
 \[
 a\sin x + b\cos x = \sqrt{a^2+b^2}\,\sin(x+\varphi),\quad \tan\varphi = \frac{b}{a}
 \]
+
+\textbf{诱导公式}：奇变偶不变，符号看象限。
+
+\textbf{诱导口诀}：
+\begin{center}
+$\sin(\pi-\alpha)=\sin\alpha$,\; $\cos(\pi-\alpha)=-\cos\alpha$,\;
+$\sin(\pi+\alpha)=-\sin\alpha$,\; $\cos(\pi+\alpha)=-\cos\alpha$
+\end{center}
 
 \textbf{解三角形}：
 \[
 \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
 \]
 \[
-a^2 = b^2 + c^2 - 2bc\cos A
+a^2 = b^2 + c^2 - 2bc\cos A,\quad
+\cos A = \frac{b^2 + c^2 - a^2}{2bc}
 \]
 \[
-S = \frac12 bc\sin A = \frac{abc}{4R}
+S = \frac12 bc\sin A = \frac12 ac\sin B = \frac12 ab\sin C = \frac{abc}{4R} = \frac12 (a+b+c)r
 \]
+
+\textbf{重要结论}：
+\begin{itemize}
+  \item $A > B \iff a > b \iff \sin A > \sin B$
+  \item $\sin(A+B) = \sin C$，$\cos(A+B) = -\cos C$
+  \item 锐角 $\triangle ABC$ 中：$\sin A > \cos B$（因为 $A+B > \frac{\pi}{2}$）
+  \item $b^2 = a^2 + c^2 \Leftrightarrow B = \frac{\pi}{2}$
+  \item $b^2 < a^2 + c^2 \Leftrightarrow B < \frac{\pi}{2}$（锐角）
+  \item $b^2 > a^2 + c^2 \Leftrightarrow B > \frac{\pi}{2}$（钝角）
+\end{itemize}
 
 \subsection{数列}
 
+\textbf{基本公式}：
 \[
 \begin{array}{c|c|c}
-\text{类型} & \text{通项} & \text{前 $n$ 项和} \\ \hline
-\text{等差} & a_n = a_1 + (n-1)d & S_n = \frac{n(a_1+a_n)}{2} \\
-\text{等比} & a_n = a_1 q^{n-1} & S_n = \frac{a_1(1-q^n)}{1-q}\;(q\neq 1)
+& \text{等差} & \text{等比} \\ \hline
+\text{通项} & a_n = a_1 + (n-1)d & a_n = a_1 q^{n-1} \\
+\text{求和} & S_n = \dfrac{n(a_1+a_n)}{2} = na_1 + \dfrac{n(n-1)}{2}d & S_n = \begin{cases}na_1 & q=1\\ \dfrac{a_1(1-q^n)}{1-q} & q\neq 1\end{cases}
 \end{array}
 \]
 
-\textbf{裂项相消}：
+\textbf{常用性质}：
+\begin{itemize}
+  \item 等差：$a_m + a_n = a_p + a_q \;(m+n=p+q)$
+  \item 等差：$S_n, S_{2n}-S_n, S_{3n}-S_{2n}$ 仍成等差
+  \item 等比：$a_m \cdot a_n = a_p \cdot a_q \;(m+n=p+q)$
+  \item 等比：$S_n, S_{2n}-S_n, S_{3n}-S_{2n}$ 仍成等比（$q\neq -1$）
+  \item $a_n = S_n - S_{n-1}\;(n\ge 2)$，$a_1 = S_1$
+\end{itemize}
+
+\textbf{常见递推求通项}：
 \[
-\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1},\quad \frac{1}{(2n-1)(2n+1)} = \frac12\!\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)
+\begin{array}{c|c}
+\text{递推类型} & \text{方法} \\ \hline
+a_{n+1} = a_n + f(n) & \text{累加法} \\
+a_{n+1} = a_n \cdot f(n) & \text{累乘法} \\
+a_{n+1} = pa_n + q & \text{构造 $a_{n+1}+\lambda = p(a_n+\lambda)$} \\
+a_{n+1} = pa_n + q^n & \text{两边同除以 $q^{n+1}$}
+\end{array}
+\]
+
+\textbf{裂项相消公式}：
+\[
+\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1},\quad
+\frac{1}{(2n-1)(2n+1)} = \frac12\!\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)
+\]
+\[
+\frac{1}{\sqrt{n}+\sqrt{n+1}} = \sqrt{n+1} - \sqrt{n},\quad
+\frac{1}{n(n+1)(n+2)} = \frac12\!\left(\frac{1}{n(n+1)} - \frac{1}{(n+1)(n+2)}\right)
 \]
 
 \subsection{平面向量}
 
 \[
+\vec{a} = (x,y),\quad |\vec{a}| = \sqrt{x^2+y^2}
+\]
+\[
 \vec{a}\cdot\vec{b} = x_1x_2 + y_1y_2 = |\vec{a}||\vec{b}|\cos\theta
 \]
 \[
-\vec{a} \perp \vec{b} \iff \vec{a}\cdot\vec{b} = 0,\quad
-\vec{a} \parallel \vec{b} \iff x_1y_2 = x_2y_1
+\vec{a} \perp \vec{b} \iff \vec{a}\cdot\vec{b} = 0 \iff x_1x_2 + y_1y_2 = 0
 \]
+\[
+\vec{a} \parallel \vec{b} \iff \vec{a} = \lambda\vec{b} \iff x_1y_2 - x_2y_1 = 0
+\]
+\[
+\cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|},\quad
+\text{投影：}|\vec{a}|\cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{b}|}
+\]
+
+\textbf{重要结论}：
+\begin{itemize}
+  \item $\vec{a}$ 在 $\vec{b}$ 上的投影向量：$\dfrac{\vec{a}\cdot\vec{b}}{|\vec{b}|^2}\,\vec{b}$
+  \item $\overrightarrow{AB} = \vec{b} - \vec{a}$
+  \item $M$ 为 $AB$ 中点 $\Rightarrow \overrightarrow{OM} = \dfrac12(\overrightarrow{OA}+\overrightarrow{OB})$
+  \item $G$ 为 $\triangle ABC$ 重心 $\Rightarrow \overrightarrow{GA}+\overrightarrow{GB}+\overrightarrow{GC}=\vec{0}$，且 $G\left(\frac{x_1+x_2+x_3}{3},\frac{y_1+y_2+y_3}{3}\right)$
+  \item $P$ 在直线 $AB$ 上 $\iff \overrightarrow{AP} = \lambda\overrightarrow{AB}$（向量共线定理）
+  \item $|\vec{a}+\vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 + 2\vec{a}\cdot\vec{b}$
+  \item $|\vec{a}-\vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 - 2\vec{a}\cdot\vec{b}$
+\end{itemize}
 
 \subsection{立体几何}
 
 \textbf{空间向量公式}：
 \[
-\sin\theta = \frac{|\vec{v}\cdot\vec{n}|}{|\vec{v}||\vec{n}|},\quad
-\cos\theta = \frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}||\vec{n_2}|},\quad
-d = \frac{|\overrightarrow{AP}\cdot\vec{n}|}{|\vec{n}|}
+\vec{a} = (x_1,y_1,z_1),\quad \vec{b} = (x_2,y_2,z_2)
+\]
+\[
+\vec{a}\cdot\vec{b} = x_1x_2 + y_1y_2 + z_1z_2,\quad
+\vec{a}\times\vec{b} = \begin{vmatrix}
+\vec{i} & \vec{j} & \vec{k} \\
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2
+\end{vmatrix}
 \]
 
-\textbf{体积}：
+\textbf{角的计算}：
 \[
-V_{\text{柱}} = Sh,\quad V_{\text{锥}} = \frac13 Sh,\quad V_{\text{球}} = \frac43\pi R^3
+\sin\theta_{\text{线面}} = \frac{|\vec{v}\cdot\vec{n}|}{|\vec{v}||\vec{n}|},\quad
+\cos\theta_{\text{二面}} = \frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}\ \text{(锐角取正值，钝角取负值)}
 \]
+
+\textbf{距离}：
+\[
+d_{\text{点面}} = \frac{|\overrightarrow{AP}\cdot\vec{n}|}{|\vec{n}|},\quad
+d_{\text{异面直线}} = \frac{|(\vec{a}\times\vec{b})\cdot\overrightarrow{AB}|}{|\vec{a}\times\vec{b}|}
+\]
+
+\textbf{体积公式}：
+\[
+V_{\text{柱}} = Sh,\quad V_{\text{锥}} = \frac13 Sh,\quad
+V_{\text{台}} = \frac13 (S'+\sqrt{S'S}+S)h,\quad
+V_{\text{球}} = \frac43 \pi R^3
+\]
+
+\textbf{表面积}：
+\[
+S_{\text{圆柱}} = 2\pi rh + 2\pi r^2,\quad
+S_{\text{圆锥}} = \pi rl + \pi r^2,\quad
+S_{\text{球}} = 4\pi R^2
+\]
+
+\textbf{空间中的平行与垂直判定}：
+\begin{itemize}
+  \item 线面平行：$a \parallel b,\; b\subset \alpha,\; a\not\subset \alpha \Rightarrow a\parallel \alpha$
+  \item 面面平行：$a,b\subset\alpha,\;a\cap b=P,\;a\parallel\beta,\;b\parallel\beta \Rightarrow \alpha\parallel\beta$
+  \item 线面垂直：$a\perp b,\;a\perp c,\;b\cap c=P,\;b,c\subset\alpha \Rightarrow a\perp\alpha$
+  \item 面面垂直：$a\perp\beta,\;a\subset\alpha \Rightarrow \alpha\perp\beta$
+\end{itemize}
 
 \subsection{平面解析几何}
 
+\textbf{直线}：
+\[
+k = \frac{y_2-y_1}{x_2-x_1},\quad
+y-y_1 = k(x-x_1),\quad
+\frac{y-y_1}{y_2-y_1} = \frac{x-x_1}{x_2-x_1}
+\]
+\[
+d = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}},\quad
+d_{\text{平行线}} = \frac{|C_1-C_2|}{\sqrt{A^2+B^2}}
+\]
+
+\textbf{圆}：
+\[
+(x-a)^2 + (y-b)^2 = r^2,\quad
+x^2+y^2+Dx+Ey+F=0,\quad
+\left(-\frac{D}{2},-\frac{E}{2}\right)
+\]
+\textbf{切线}：$x_0x + y_0y = r^2$（圆上点），$d = r$（圆心到直线距离）
+
 \textbf{圆锥曲线}：
 \[
-\begin{array}{c|c|c|c}
-\text{曲线} & \text{方程} & c^2 & e \\ \hline
-\text{椭圆} & \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 & a^2-b^2 & \frac{c}{a}\in(0,1) \\
-\text{双曲线} & \frac{x^2}{a^2}-\frac{y^2}{b^2}=1 & a^2+b^2 & \frac{c}{a}>1 \\
-\text{抛物线} & y^2=2px & - & 1
+\begin{array}{c|c|c|c|c}
+\text{曲线} & \text{标准方程} & a,b,c & e & \text{渐近线} \\ \hline
+\text{椭圆} & \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1 & c^2=a^2-b^2 & e=\dfrac{c}{a}\in(0,1) & - \\
+\text{双曲线} & \dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1 & c^2=a^2+b^2 & e=\dfrac{c}{a}>1 & y=\pm\dfrac{b}{a}x \\
+\text{抛物线} & y^2=2px & p\text{ 为焦准距} & e=1 & -
 \end{array}
 \]
 
 \textbf{弦长公式}：
 \[
-|AB| = \sqrt{1+k^2}\,|x_1-x_2|
+|AB| = \sqrt{1+k^2}\,|x_1-x_2| = \sqrt{1+\frac{1}{k^2}}\,|y_1-y_2|
+\]
+
+\textbf{中点弦结论}：
+\[
+\text{椭圆：} k_{AB}\cdot k_{OM} = -\frac{b^2}{a^2},\quad
+\text{双曲线：} k_{AB}\cdot k_{OM} = \frac{b^2}{a^2},\quad
+\text{抛物线：} k_{AB} = \frac{p}{y_0}\;(y_0\text{ 为中点纵坐标})
 \]
 
 \subsection{概率与统计}
 
-\textbf{二项分布} $X\sim B(n,p)$：
+\textbf{概率公式}：
 \[
-P(X=k)=C_n^k p^k(1-p)^{n-k},\quad E(X)=np,\quad D(X)=np(1-p)
+P(A) = \frac{n(A)}{n(\Omega)},\quad
+P(\bar{A}) = 1 - P(A),\quad
+P(B|A) = \frac{P(AB)}{P(A)}
+\]
+\[
+P(B) = \sum_{i=1}^n P(A_i)P(B|A_i)\quad\text{(全概率公式)}
 \]
 
-\textbf{正态分布} $X\sim N(\mu,\sigma^2)$：
+\textbf{重要分布}：
 \[
-P(\mu-\sigma<X<\mu+\sigma)\approx 0.6827,\;
-P(\mu-2\sigma<X<\mu+2\sigma)\approx 0.9545,\;
-P(\mu-3\sigma<X<\mu+3\sigma)\approx 0.9973
+\begin{array}{c|c|c|c}
+\text{分布} & P(X=k) & E(X) & D(X) \\ \hline
+\text{二项 } B(n,p) & C_n^k p^k(1-p)^{n-k} & np & np(1-p) \\
+\text{超几何} & \dfrac{C_M^k C_{N-M}^{n-k}}{C_N^n} & n\frac{M}{N} & - \\
+\text{两点} & P(X=1)=p & p & p(1-p) &\\
+\end{array}
+\]
+
+\textbf{统计量}：
+\[
+\bar{x} = \frac1n\sum_{i=1}^n x_i,\quad
+s^2 = \frac1n\sum (x_i-\bar{x})^2 = \frac1n\sum x_i^2 - \bar{x}^2
+\]
+\[
+r = \frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum (x_i-\bar{x})^2\sum (y_i-\bar{y})^2}},\quad
+\hat{b} = \frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2}
+\]
+
+\textbf{正态分布} $X \sim N(\mu,\sigma^2)$：
+\[
+P(\mu-\sigma < X < \mu+\sigma) \approx 0.6827
+\]
+\[
+P(\mu-2\sigma < X < \mu+2\sigma) \approx 0.9545
+\]
+\[
+P(\mu-3\sigma < X < \mu+3\sigma) \approx 0.9973
 \]
 
 \subsection{排列组合与二项式定理}
 
 \[
-A_n^m = \frac{n!}{(n-m)!},\quad C_n^m = \frac{n!}{m!(n-m)!}
+A_n^m = \frac{n!}{(n-m)!},\quad
+C_n^m = \frac{n!}{m!(n-m)!},\quad
+C_n^m = C_n^{n-m}
 \]
 \[
-(a+b)^n = \sum_{k=0}^n C_n^k a^{n-k}b^k,\quad C_n^0+C_n^1+\cdots+C_n^n = 2^n
+C_n^m + C_n^{m+1} = C_{n+1}^{m+1}
+\]
+
+\textbf{二项式定理}：
+\[
+(a+b)^n = \sum_{k=0}^n C_n^k a^{n-k}b^k,\quad
+T_{k+1} = C_n^k a^{n-k}b^k
+\]
+\[
+\sum_{k=0}^n C_n^k = 2^n,\quad
+\sum_{k=0}^{\lfloor n/2\rfloor} C_n^{2k} = 2^{n-1}
+\]
+
+\subsection{常用数值速查}
+\[
+\sqrt{2}\approx 1.414,\quad
+\sqrt{3}\approx 1.732,\quad
+\sqrt{5}\approx 2.236,\quad
+\sqrt{6}\approx 2.449,\quad
+\sqrt{7}\approx 2.646,\quad
+\sqrt{10}\approx 3.162
+\]
+\[
+\pi\approx 3.142,\quad
+e\approx 2.718,\quad
+\ln2\approx 0.693,\quad
+\ln3\approx 1.099,\quad
+\lg2\approx 0.301,\quad
+\lg3\approx 0.477
+\]
+\[
+\sin\frac{\pi}{6}=\frac12,\;
+\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2},\;
+\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2},\;
+\sin\frac{\pi}{2}=1
+\]
+\[
+\cos\frac{\pi}{6}=\frac{\sqrt{3}}{2},\;
+\cos\frac{\pi}{4}=\frac{\sqrt{2}}{2},\;
+\cos\frac{\pi}{3}=\frac12,\;
+\cos\frac{\pi}{2}=0
+\]
+\[
+\tan\frac{\pi}{6}=\frac{\sqrt{3}}{3},\;
+\tan\frac{\pi}{4}=1,\;
+\tan\frac{\pi}{3}=\sqrt{3}
 \]

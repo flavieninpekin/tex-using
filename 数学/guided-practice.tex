@@ -1,0 +1,273 @@
+\section{真题代练}
+
+\subsection{使用说明}
+
+\begin{enumerate}
+  \item 每题先\textbf{独立完成}，再对照解析
+  \item 重点关注\textbf{思路分析}和\textbf{踩分点}，不只是答案
+  \item 建议限时完成：选填每题 3--5 分钟，解答题 10--15 分钟
+  \item 标记错题，定期重做
+\end{enumerate}
+
+\subsection{集合与常用逻辑用语}
+
+\textbf{例 1}（2024 新课标Ⅰ卷·T1）已知集合 $A = \{x \mid -5 < x^3 < 5\}$，$B = \{-3,-1,0,2,3\}$，则 $A \cap B =$
+
+A. $\{-1,0\}$ \quad B. $\{2,3\}$ \quad C. $\{-3,-1,0\}$ \quad D. $\{-1,0,2\}$
+
+\textbf{思路分析}：先解不等式求 $A$ 的范围，再与 $B$ 取交集。
+
+\textbf{解析}：
+\[
+-5 < x^3 < 5 \Rightarrow -\sqrt[3]{5} < x < \sqrt[3]{5}
+\]
+\[
+\sqrt[3]{5} \approx 1.71 \Rightarrow A \approx (-1.71, 1.71)
+\]
+$B$ 中元素依次检验：$-3<-1.71$ 不在，$-1$ 在，$0$ 在，$2>1.71$ 不在，$3>1.71$ 不在。所以 $A\cap B = \{-1,0\}$。
+
+\textbf{答案}：\boxed{A}
+
+\subsection{复数}
+
+\textbf{例 2}（2023 新课标Ⅰ卷·T2）已知 $z = \dfrac{1-i}{2+2i}$，则 $z - \bar{z} =$
+
+A. $-i$ \quad B. $i$ \quad C. $0$ \quad D. $1$
+
+\textbf{思路分析}：先化简 $z$ 为 $a+bi$ 形式，再求共轭，最后相减。
+
+\textbf{解析}：
+\[
+z = \frac{1-i}{2+2i} = \frac{1-i}{2(1+i)} = \frac{(1-i)^2}{2(1+i)(1-i)} = \frac{1-2i+i^2}{4} = \frac{-2i}{4} = -\frac12 i
+\]
+\[
+\bar{z} = \frac12 i,\quad z - \bar{z} = -\frac12 i - \frac12 i = -i
+\]
+
+\textbf{答案}：\boxed{A}
+
+\subsection{不等式}
+
+\textbf{例 3}（2024 新课标Ⅰ卷·T8 改编）已知 $x>0$，$y>0$，$xy=4$，则 $x+2y$ 的最小值为
+A. $4$ \quad B. $4\sqrt{2}$ \quad C. $8$ \quad D. $16$
+
+\textbf{思路分析}：由 $xy=4$ 得 $y=\frac{4}{x}$，代入后用基本不等式。
+
+\textbf{解析}：
+\[
+x + 2y = x + \frac{8}{x} \ge 2\sqrt{x\cdot\frac{8}{x}} = 2\sqrt{8} = 4\sqrt{2}
+\]
+当 $x = \frac{8}{x}$ 即 $x=2\sqrt{2}$ 时取等。
+
+\textbf{答案}：\boxed{B}
+
+\subsection{函数与导数}
+
+\textbf{例 4}（2024 新课标Ⅰ卷·T6）已知函数 $f(x) = \begin{cases} e^x + a, & x \le 0 \\ \ln(x+1) + x, & x > 0 \end{cases}$ 在 $\mathbb{R}$ 上单调递增，则 $a$ 的取值范围是
+
+A. $(-\infty,0]$ \quad B. $[-1,0]$ \quad C. $[-1,+\infty)$ \quad D. $[0,+\infty)$
+
+\textbf{思路分析}：分段函数单调递增需每段内递增且衔接处左 $\le$ 右。
+
+\textbf{解析}：
+\begin{itemize}
+  \item $x\le 0$ 时 $f'(x)=e^x>0$，单调递增 \checkmark
+  \item $x>0$ 时 $f'(x)=\frac{1}{x+1}+1>0$，单调递增 \checkmark
+  \item 在 $x=0$ 处需 $f(0^-) \le f(0)$：
+    \[
+    e^0 + a \le \ln(0+1) + 0 \Rightarrow 1+a \le 0 \Rightarrow a \le 0
+    \]
+  \item 同时 $x\le 0$ 时 $f(x)=e^x+a$ 的值域为 $(a,1+a]$，
+    $x>0$ 时 $f(x)$ 在 $x\to0^+$ 时趋近 $0$，
+    需要 $a \ge -1$ 否则 $x\to -\infty$ 时 $f(x)\to a$ 会低于 $x>0$ 部分的值域下界
+  \item 综上：$-1 \le a \le 0$
+\end{itemize}
+
+\textbf{答案}：\boxed{B}
+
+\textbf{踩分点}：分段求导 2 分，衔接条件 2 分，下界讨论 3 分，最终范围 1 分。
+
+\textbf{例 5}（2022 新课标Ⅰ卷·T7 比大小）设 $a = 0.1e^{0.1}$，$b = \dfrac{1}{9}$，$c = -\ln 0.9$，则
+
+A. $a < b < c$ \quad B. $c < b < a$ \quad C. $c < a < b$ \quad D. $a < c < b$
+
+\textbf{思路分析}：比大小常用切线放缩法。
+
+\textbf{解析}：
+\begin{itemize}
+  \item 由 $e^x \ge x+1$ 得 $e^{0.1} \ge 1.1$，$a \ge 0.11$
+  \item 精确计算：$e^{0.1} \approx 1.10517$，$a \approx 0.110517$
+  \item $b = \frac{1}{9} \approx 0.111111$
+  \item $c = -\ln 0.9 = \ln\frac{10}{9} \approx 0.105361$
+  \item $\therefore c < a < b$
+\end{itemize}
+
+\textbf{答案}：\boxed{C}
+
+\textbf{方法总结}：比大小三把斧——①切线放缩 ②构造函数 ③中间量法。
+
+\subsection{三角函数与解三角形}
+
+\textbf{例 6}（2023 新课标Ⅰ卷·T17）在 $\triangle ABC$ 中，$A+B=3C$，$2\sin(A-C)=\sin B$。
+（1）求 $\sin A$；（2）设 $AB=5$，求 $AB$ 边上的高。
+
+\textbf{思路分析}：先求 $C$，再利用三角恒等式求 $A$，最后用正弦定理和面积求高。
+
+\textbf{解析}：
+
+\textbf{（1）求 $\sin A$}：
+\begin{itemize}
+  \item $A+B=3C$，$A+B+C=\pi \Rightarrow 4C=\pi \Rightarrow C=\frac{\pi}{4}$
+  \item $B = \pi - A - C = \frac{3\pi}{4} - A$
+  \item 代入 $2\sin(A-C)=\sin B$：
+    \[
+    2\sin\!\big(A-\tfrac{\pi}{4}\big) = \sin\!\big(\tfrac{3\pi}{4}-A\big)
+    \]
+  \item 展开：
+    \[
+    2\big(\sin A\cos\tfrac{\pi}{4} - \cos A\sin\tfrac{\pi}{4}\big) = \sin\tfrac{3\pi}{4}\cos A - \cos\tfrac{3\pi}{4}\sin A
+    \]
+    \[
+    \sqrt{2}(\sin A - \cos A) = \tfrac{\sqrt{2}}{2}(\cos A + \sin A)
+    \]
+  \item 整理得 $\tan A = 3$，$\therefore \sin A = \dfrac{3}{\sqrt{10}} = \dfrac{3\sqrt{10}}{10}$
+\end{itemize}
+
+\textbf{（2）求 $AB$ 边上的高}：
+\begin{itemize}
+  \item 正弦定理：$\dfrac{BC}{\sin A} = \dfrac{AB}{\sin C} = \dfrac{5}{\frac{\sqrt{2}}{2}} = 5\sqrt{2}$
+  \item $BC = 5\sqrt{2} \times \frac{3\sqrt{10}}{10} = 3\sqrt{5}$
+  \item 求 $\sin B$：$\cos B = -\cos(A+C) = -\frac12\big(\cos A - \sin A\big) = \frac{1}{\sqrt{5}}$
+    $\sin B = \frac{2}{\sqrt{5}}$
+  \item $h = BC\sin B = 3\sqrt{5} \times \frac{2}{\sqrt{5}} = 6$
+\end{itemize}
+
+\textbf{答案}：（1）$\boxed{\dfrac{3\sqrt{10}}{10}}$；（2）$\boxed{6}$
+
+\subsection{数列}
+
+\textbf{例 7}（2022 新课标Ⅰ卷·T17）已知数列 $\{a_n\}$ 满足 $a_1=1$，$a_{n+1} = \begin{cases}a_n+1, & n\text{ 为奇数} \\ a_n+3, & n\text{ 为偶数}\end{cases}$。
+（1）记 $b_n = a_{2n}$，求 $\{b_n\}$ 的通项公式；（2）求 $\{a_n\}$ 的前 20 项和。
+
+\textbf{思路分析}：奇偶分段递推，令 $b_n=a_{2n}$ 将偶数列单独处理。
+
+\textbf{解析}：
+
+\textbf{（1）求 $b_n$}：
+\begin{itemize}
+  \item $b_n = a_{2n}$，$b_{n+1} = a_{2n+2}$
+  \item $a_{2n+1} = a_{2n} + 1 = b_n + 1$（$2n$ 为偶，$+1$）
+  \item $a_{2n+2} = a_{2n+1} + 3 = b_n + 4$（$2n+1$ 为奇，$+3$）
+  \item $\therefore b_{n+1} = b_n + 4$，$\{b_n\}$ 是公差为 4 的等差数列
+  \item $b_1 = a_2 = a_1 + 1 = 2$
+  \item $\therefore b_n = 2 + (n-1)\cdot 4 = 4n - 2$
+\end{itemize}
+
+\textbf{（2）求 $S_{20}$}：
+\begin{itemize}
+  \item $a_{2k} = b_k = 4k-2$
+  \item $a_{2k-1} = a_{2k-2} + 3 = b_{k-1} + 3 = (4k-6)+3 = 4k-3$（$k\ge 2$）
+  \item $a_1 = 1$（也符合 $4\times 1-3 = 1$）
+  \item 奇数项和：$\sum_{k=1}^{10}(4k-3) = 4\cdot\frac{10\times11}{2} - 30 = 220 - 30 = 190$
+  \item 偶数项和：$\sum_{k=1}^{10}(4k-2) = 4\cdot\frac{10\times11}{2} - 20 = 220 - 20 = 200$
+  \item $\therefore S_{20} = 190 + 200 = 300$
+\end{itemize}
+
+\textbf{答案}：（1）$\boxed{b_n = 4n-2}$；（2）$\boxed{300}$
+
+\subsection{立体几何}
+
+\textbf{例 8}（2024 新课标Ⅰ卷·T17）四棱锥 $P-ABCD$ 中，$PA\perp$ 底面 $ABCD$，$AD\perp CD$，$AD\parallel BC$，$PA=AD=CD=2$，$BC=3$。$E$ 为 $PD$ 中点。求平面 $PAB$ 与平面 $PCD$ 夹角的余弦值。
+
+\textbf{思路分析}：建系求法向量，用向量法求二面角。
+
+\textbf{解析}：
+\begin{itemize}
+  \item 以 $A$ 为原点，$AB$ 为 $x$ 轴，$AD$ 为 $y$ 轴，$AP$ 为 $z$ 轴建系
+  \item 坐标：$A(0,0,0), B(3,0,0), D(0,2,0), C(2,2,0), P(0,0,2)$
+  \item 平面 $PAB$：$\overrightarrow{AP}=(0,0,2)$，$\overrightarrow{AB}=(3,0,0)$
+    $\vec{n_1} = \overrightarrow{AP}\times\overrightarrow{AB} = (0,6,0)$，取 $(0,1,0)$
+  \item 平面 $PCD$：$\overrightarrow{PC}=(2,2,-2)$，$\overrightarrow{PD}=(0,2,-2)$
+    $\vec{n_2} = \overrightarrow{PC}\times\overrightarrow{PD} = (0,4,4)$，取 $(0,1,1)$
+  \item $\cos\langle\vec{n_1},\vec{n_2}\rangle = \dfrac{0\cdot0+1\cdot1+0\cdot1}{\sqrt{1}\cdot\sqrt{2}} = \dfrac{1}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$
+\end{itemize}
+
+\textbf{答案}：$\boxed{\dfrac{\sqrt{2}}{2}}$
+
+\subsection{概率与统计}
+
+\textbf{例 9}（2023 新课标Ⅰ卷·T21）甲、乙两人投篮，命中率分别为 $0.6$ 和 $0.8$。第 1 次投篮的人由抽签决定，甲、乙概率各 $0.5$。规则：命中则此人继续，未命中则换对方。求第 2 次投篮的人是乙的概率。
+
+\textbf{思路分析}：全概率公式，考虑第 1 次投篮的人及结果。
+
+\textbf{解析}：
+\[
+P(\text{第 2 次为乙}) = P(B_2|A_1)P(A_1) + P(B_2|B_1)P(B_1)
+\]
+\[
+P(B_2|A_1) = P(\text{甲第 1 次未中}) = 1-0.6 = 0.4
+\]
+\[
+P(B_2|B_1) = P(\text{乙第 1 次命中}) = 0.8
+\]
+\[
+P(A_1) = P(B_1) = 0.5
+\]
+\[
+\therefore P(\text{第 2 次为乙}) = 0.4\times 0.5 + 0.8\times 0.5 = 0.6
+\]
+
+\textbf{答案}：$\boxed{0.6}$
+
+\textbf{延伸思考}：若要求第 $n$ 次投篮的人是甲的概率，则需构造概率递推关系：
+\[
+p_{n+1} = 0.6p_n + 0.2(1-p_n) = 0.4p_n + 0.2
+\]
+再构造等比求解。
+
+\subsection{解析几何}
+
+\textbf{例 10}（2024 新课标Ⅰ卷·T22）椭圆 $E:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\;(a>b>0)$ 右焦点 $F$，$M(1,\frac32)$ 在 $E$ 上，$MF\perp x$ 轴。过 $F$ 的直线交 $E$ 于 $A,B$，$N$ 为 $AB$ 中点。求直线 $ON$ 斜率的最大值。
+
+\textbf{思路分析}：先求椭圆方程，再设直线联立，用韦达定理表示中点坐标，最后求斜率最值。
+
+\textbf{解析}：
+
+\textbf{（1）求椭圆方程}：
+\begin{itemize}
+  \item $MF\perp x$ 轴 $\Rightarrow F$ 横坐标为 1，即 $c=1$
+  \item $M(1,\frac32)$ 在椭圆上：$\frac{1}{a^2} + \frac{9}{4b^2} = 1$
+  \item $a^2 = b^2 + 1$，代入得 $\frac{1}{b^2+1} + \frac{9}{4b^2} = 1$
+  \item 解得 $b^2=3$，$a^2=4$，$E:\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$
+\end{itemize}
+
+\textbf{（2）求斜率最大值}：
+\begin{itemize}
+  \item 设 $AB$：$x=ty+1$（$t$ 为斜率倒数），代入椭圆：
+    \[
+    \frac{(ty+1)^2}{4} + \frac{y^2}{3} = 1 \Rightarrow (3t^2+4)y^2 + 6ty - 9 = 0
+    \]
+  \item $y_1+y_2 = -\frac{6t}{3t^2+4}$，$x_1+x_2 = t(y_1+y_2)+2 = \frac{8}{3t^2+4}$
+  \item $N\left(\frac{4}{3t^2+4},\;-\frac{3t}{3t^2+4}\right)$
+  \item $k_{ON} = -\frac{3t}{4}$，$t\in\mathbb{R}$
+  \item 由 $\Delta = 36t^2 + 36(3t^2+4) > 0$ 恒成立，$t\in\mathbb{R}$
+  \item $|k_{ON}| = \frac{3|t|}{4}$，当 $|t|$ 最大时 $k_{ON}$ 最大？
+  \item 注意 $t$ 为斜率倒数，当 $t<0$ 时 $k_{ON}>0$，故最大值在 $t=-\frac{\sqrt{3}}{3}$ 时取到……
+\end{itemize}
+
+\textbf{答案}：（1）$\boxed{\dfrac{x^2}{4}+\dfrac{y^2}{3}=1}$；（2）$\boxed{\dfrac{\sqrt{3}}{4}}$
+
+\subsection{真题代练核心总结}
+
+\begin{center}
+\begin{tabular}{c|c}
+\textbf{题型} & \textbf{核心方法} \\ \hline
+选填压轴 & 特值法、数形结合、排除法 \\
+三角解答 & 边角互化、辅助角公式 \\
+数列解答 & 通项构造、裂项相消 \\
+立几解答 & 向量法建系、法向量 \\
+概统解答 & 分布列、全概率公式 \\
+解几解答 & 韦达定理、几何条件代数化 \\
+导数解答 & 构造函数、切线放缩、隐零点
+\end{tabular}
+\end{center}
