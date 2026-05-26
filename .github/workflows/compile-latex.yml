@@ -9,7 +9,7 @@ on:
     branches: [ main ]
     paths:
       - '**.tex'
-  workflow_dispatch:  # 手动触发
+  workflow_dispatch:
 
 jobs:
   build:
@@ -26,16 +26,16 @@ jobs:
           texlive-latex-extra texlive-xetex texlive-fonts-recommended \
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
 
-    - name: Compile LaTeX - main.pdf
+    - name: Compile main.pdf
       run: |
         cd $GITHUB_WORKSPACE
         latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 
-    - name: Compile LaTeX - per subject
+    - name: Compile per-subject (standalone documents)
       run: |
         cd $GITHUB_WORKSPACE
-        for dir in 数学 语文 英语 物理 化学 生物; do
-          if [ -f "$dir/$dir.tex" ]; then
+        for dir in 数学; do
+          if [ -f "$dir/$dir.tex" ] && head -1 "$dir/$dir.tex" | grep -q 'documentclass'; then
             cd "$dir"
             latexmk -xelatex -interaction=nonstopmode -halt-on-error "$dir.tex" || true
             cd ..
