@@ -20,28 +20,13 @@ jobs:
           texlive-latex-extra texlive-xetex texlive-fonts-recommended \
           texlive-fonts-extra texlive-lang-chinese latexmk xz-utils
     - name: Compile
-      id: compile
-      continue-on-error: true
       run: |
         cd $GITHUB_WORKSPACE
-        latexmk -xelatex -interaction=nonstopmode main.tex 2>&1 | tee output.log
-    - name: Show errors
-      if: always()
-      run: |
-        echo "## Compilation Result" >> $GITHUB_STEP_SUMMARY
-        if [ -f main.pdf ]; then
-          echo "✅ PDF generated: $(ls -lh main.pdf | awk '{print $5}')" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "❌ PDF NOT generated" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          grep -A2 '^! ' output.log 2>/dev/null | head -30 >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-        fi
-    - name: Upload logs
+        latexmk -xelatex -interaction=nonstopmode main.tex
+    - name: Upload PDF
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: build-logs
-        path: |
-          *.log
-          output.log
+        name: Compiled-PDFs
+        path: "*.pdf"
+        if-no-files-found: warn
