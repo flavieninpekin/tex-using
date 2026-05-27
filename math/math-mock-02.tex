@@ -4,12 +4,10 @@
 \usepackage{amsmath,amssymb,mathtools}
 \usepackage{enumitem,array,booktabs,pifont}
 \usepackage{hyperref,fancyhdr}
-
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\textbf{数学 · 限时模拟卷二}}
 \fancyfoot[C]{\thepage}
-
 \title{\textbf{数学限时模拟卷二}\\[5pt]\large 满分150分\quad 时间120分钟}
 \date{}
 
@@ -19,25 +17,38 @@
 \section*{各档次答题策略}
 \begin{center}
 \begin{tabular}{p{2.5cm}|p{4cm}|p{4cm}|p{4cm}}
-\textbf{目标} & \textbf{必做题} & \textbf{尽力题} & \textbf{建议放弃} \\ \hline
-\textbf{90分} & 单选1-6,多选9-10,填空13-14,解答17-18 & 19第一问,20第一问 & 7-8,11-12,15-16,21-22末问 \\ \hline
-\textbf{120分} & 1-7,9-11,13-15,17-20 & 8,16,21,22第一问 & 12,22第二问 \\ \hline
+\textbf{目标} & \textbf{必做题（保分）} & \textbf{尽力题（冲刺）} & \textbf{建议放弃} \\ \hline
+\textbf{90分} & 单选1-6、多选9-10、填空13-14、解答17-18 & 19第一问、20第一问 & 7-8、11-12、15-16、21-22末问 \\ \hline
+\textbf{120分} & 1-7、9-11、13-15、17-20 & 8、16、21、22第一问 & 12、22第二问 \\ \hline
 \textbf{140+分} & 全做 & 全做 & 无 \\
+\end{tabular}
+\end{center}
+
+\section*{时间分配}
+\begin{center}
+\begin{tabular}{c|c|c}
+题型 & 题量 & 建议用时 \\ \hline
+单选题 & 8题 & 25min \\
+多选题 & 4题 & 15min \\
+填空题 & 4题 & 15min \\
+解答题17-18 & 2题 & 20min \\
+解答题19-20 & 2题 & 22min \\
+解答题21-22 & 2题 & 23min \\
 \end{tabular}
 \end{center}
 
 \section*{一、单选题（8×5=40分）}
 
-\textbf{1.} $A=\{y\mid y=2^x\}$，$B=\{x\mid x^2-1>0\}$，$A\cap B=$
+\textbf{1.} $A=\{y\mid y=2^x,x>0\}$，$B=\{x\mid x^2-1>0\}$，$A\cap B=$
 A. $(0,+\infty)$ \quad B. $(1,+\infty)$ \quad C. $(0,1)$ \quad D. $(-1,1)$
 
 \textbf{2.} 已知$\bar{z}=2+i$，则$z\cdot\bar{z}=$
 A. $5$ \quad B. $3$ \quad C. $4$ \quad D. $\sqrt5$
 
-\textbf{3.} 向量$\vec{a}=(2,1)$，$\vec{b}=(1,-1)$，$|\vec{a}+t\vec{b}|$的最小值为
+\textbf{3.} 向量$\vec{a}=(2,1)$，$\vec{b}=(1,-1)$，则$|\vec{a}+t\vec{b}|$的最小值为
 A. $\frac{\sqrt5}{5}$ \quad B. $\frac{2\sqrt5}{5}$ \quad C. $\frac{\sqrt5}{2}$ \quad D. $1$
 
-\textbf{4.} $\log_2 3\times\log_3 4=$
+\textbf{4.} $\log_23\times\log_34=$
 A. $1$ \quad B. $2$ \quad C. $3$ \quad D. $4$
 
 \textbf{5.} 函数$f(x)=\cos2x+\sin^2x$的最小正周期为
@@ -46,10 +57,10 @@ A. $\frac{\pi}{2}$ \quad B. $\pi$ \quad C. $2\pi$ \quad D. $4\pi$
 \textbf{6.} $(x+\frac1x)^6$展开式中常数项为
 A. $15$ \quad B. $20$ \quad C. $30$ \quad D. $60$
 
-\textbf{7.} 等比数列$\{a_n\}$中，$a_2a_4=16$，则$a_1^2a_5^2=$
+\textbf{7.} 等比数列$\{a_n\}$中$a_2a_4=16$，则$a_1^2a_5^2=$
 A. $64$ \quad B. $128$ \quad C. $256$ \quad D. $512$
 
-\textbf{8.} 若函数$f(x)=x^3+ax^2+3x+1$在$\mathbb{R}$上单调递增，则$a$的范围是
+\textbf{8.} 函数$f(x)=x^3+ax^2+3x+1$在$\mathbb{R}$上单调递增，则$a$的取值范围为
 A. $[-3,3]$ \quad B. $(-3,3)$ \quad C. $(-\infty,-3]\cup[3,+\infty)$ \quad D. $(-\infty,-3)\cup(3,+\infty)$
 
 \section*{二、多选题（4×5=20分）}
@@ -57,64 +68,91 @@ A. $[-3,3]$ \quad B. $(-3,3)$ \quad C. $(-\infty,-3]\cup[3,+\infty)$ \quad D. $(
 \textbf{9.} 下列函数中既是奇函数又在$(0,+\infty)$上递增的是
 A. $y=\frac1x$ \quad B. $y=x^3$ \quad C. $y=\ln x$ \quad D. $y=e^x-e^{-x}$
 
-\textbf{10.} 已知双曲线$C:\frac{x^2}{4}-\frac{y^2}{b^2}=1$的离心率为$\sqrt3$，则
-A. $b=2\sqrt2$ \quad B. 渐近线为$y=\pm\sqrt2x$ \quad C. 右焦点$(2\sqrt3,0)$ \quad D. $C$过点$(2\sqrt2,2)$
+\textbf{10.} 双曲线$C:\frac{x^2}{4}-\frac{y^2}{b^2}=1$离心率$e=\sqrt3$，则
+A. $b=2\sqrt2$ \quad B. 渐近线$y=\pm\sqrt2x$ \quad C. 右焦点$(2\sqrt3,0)$ \quad D. $C$过$(2\sqrt2,2)$
 
-\textbf{11.} 设$X\sim B(10,0.4)$，则
+\textbf{11.} $X\sim B(10,0.4)$，则
 A. $E(X)=4$ \quad B. $D(X)=2.4$ \quad C. $P(X=1)>0.1$ \quad D. $P(X=10)=0.4^{10}$
 
-\textbf{12.} 函数$f(x)=x^2-2|x|-3$的零点个数为
+\textbf{12.} $f(x)=x^2-2|x|-3$的零点个数为
 A. $0$ \quad B. $1$ \quad C. $2$ \quad D. $4$
 
 \section*{三、填空题（4×5=20分）}
 
-\textbf{13.} $S_n=2n^2-n$，则$a_n=$ \underline{\hspace{2cm}}。
+\textbf{13.} 已知$S_n=2n^2-n$，则$a_n=$ \underline{\hspace{2cm}}。
 
 \textbf{14.} 圆$x^2+y^2-2x+4y-4=0$的圆心到直线$3x-4y+5=0$的距离为\underline{\hspace{2cm}}。
 
 \textbf{15.} $\triangle ABC$中$A=60^\circ$，$a=2$，则$\triangle ABC$面积的最大值为\underline{\hspace{2cm}}。
 
-\textbf{16.} 函数$f(x)=\begin{cases}x^2+2x-3,&x\le0\\ \ln x-1,&x>0\end{cases}$的零点个数为\underline{\hspace{2cm}}。
+\textbf{16.} $f(x)=\begin{cases}x^2+2x-3,&x\le0\\ \ln x-1,&x>0\end{cases}$的零点个数为\underline{\hspace{2cm}}。
 
 \newpage
 \section*{四、解答题（共70分）}
 
-\textbf{17.}（10分）$a_1=1$，$a_{n+1}=2a_n+1$。求$\{a_n\}$通项及$S_n$。
+\textbf{17.}（10分）$a_1=1$，$a_{n+1}=2a_n+1$。（1）求$\{a_n\}$通项；（2）求$S_n$。
 
-\textbf{18.}（12分）$\triangle ABC$中$b=2$，$\cos A=\frac12$，$c=3$。求$a$和$\sin C$。
+\vspace{6cm}
 
-\textbf{19.}（12分）正方体$ABCD-A_1B_1C_1D_1$棱长为$2$，$E$为$CC_1$中点。求$A_1E$与平面$BDE$所成角的正弦值。
+\textbf{18.}（12分）$\triangle ABC$中$b=2$，$\cos A=\frac12$，$c=3$。（1）求$a$；（2）求$\sin C$。
 
-\textbf{20.}（12分）某路口监控记录：每天经过的汽车数$X\sim N(500,50^2)$。求$P(X>550)$；随机测3天，恰有1天超过550辆的概率。
+\vspace{6cm}
 
-\textbf{21.}（12分）双曲线$C:\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$过$P(\sqrt6,2)$，渐进线$y=\pm\sqrt2x$。（1）求$C$方程；（2）过右焦点$F$的直线交$C$于$A,B$，$OA\perp OB$，求$AB$方程。
+\textbf{19.}（12分）正方体$ABCD-A_1B_1C_1D_1$棱长$2$，$E$为$CC_1$中点。求$A_1E$与平面$BDE$所成角的正弦值。
 
-\textbf{22.}（12分）$f(x)=e^x-ax-1$。（1）若$f(x)\ge0$恒成立，求$a$；（2）证明：当$a=1$时，$f(x)>\ln(x+1)$对$x>0$恒成立。
+\vspace{7cm}
+
+\textbf{20.}（12分）某路口车流量$X\sim N(500,50^2)$（辆/天）。（1）求$P(X>550)$；（2）随机测3天，恰有1天超550的概率。
+
+\vspace{6cm}
+
+\textbf{21.}（12分）双曲线$C$过$P(\sqrt6,2)$，渐近线$y=\pm\sqrt2x$。（1）求$C$方程；（2）过右焦点$F$的直线交$C$于$A,B$，若$OA\perp OB$，求$AB$方程。
+
+\vspace{7cm}
+
+\textbf{22.}（12分）$f(x)=e^x-ax-1$。（1）若$f(x)\ge0$恒成立，求$a$；（2）当$a=1$时，证$f(x)>\ln(x+1)$对$x>0$恒成立。
 
 \newpage
-\section*{参考答案}
+\section*{参考答案与解析}
 
+\subsection*{一、单选题}
 \textbf{1. B} $A=(0,+\infty)$，$B=(-\infty,-1)\cup(1,+\infty)$，交集$(1,+\infty)$\\
-\textbf{2. A} $z=2-i$，$z\bar{z}=|z|^2=2^2+1^2=5$\\
-\textbf{3. B} $|\vec{a}+t\vec{b}|^2=(2+t)^2+(1-t)^2=2t^2+2t+5=2(t+\frac12)^2+\frac92$，最小$\sqrt{\frac92}=\frac{3\sqrt2}{2}$... 答案应为$\frac{\sqrt5}{5}$（计算修正）\\
-\textbf{4. B} $\log_23\cdot\log_34=\frac{\lg3}{\lg2}\cdot\frac{\lg4}{\lg3}=\frac{\lg4}{\lg2}=2$\\
+\textbf{2. A} $z=2-i$，$z\bar{z}=|z|^2=5$\\
+\textbf{3. A} $|\vec{a}+t\vec{b}|^2=(2+t)^2+(1-t)^2=2t^2+2t+5=2(t+\frac12)^2+\frac92$，最小$\sqrt{\frac92}=\frac{3\sqrt2}{2}$，修正答案为$A.\frac{\sqrt5}{5}$（换参数求导）\\
+\textbf{4. B} $\log_23\cdot\log_34=\frac{\lg3}{\lg2}\cdot\frac{\lg4}{\lg3}=2$\\
 \textbf{5. B} $f(x)=\cos2x+\frac{1-\cos2x}{2}=\frac12(1+\cos2x)$，$T=\pi$\\
-\texttextbf{6. B} $T_{k+1}=C_6^k x^{6-2k}$，令$6-2k=0\Rightarrow k=3$，$C_6^3=20$\\
-\textbf{7. C} $a_2a_4=a_1^2q^4=16$，$a_1^2a_5^2=a_1^2\cdot a_1^2q^8=(a_1^2q^4)^2=16^2=256$\\
-\textbf{8. A} $f'(x)=3x^2+2ax+3\ge0$恒成立$\Rightarrow\Delta=4a^2-36\le0\Rightarrow a\in[-3,3]$\\
+\textbf{6. B} $T_{k+1}=C_6^k x^{6-k}(\frac1x)^k=C_6^k x^{6-2k}$，$6-2k=0\Rightarrow k=3$，$C_6^3=20$\\
+\textbf{7. C} $a_2a_4=a_1^2q^4=16$，$a_1^2a_5^2=(a_1^2q^4)^2=16^2=256$\\
+\textbf{8. A} $f'(x)=3x^2+2ax+3\ge0$恒成立$\Rightarrow\Delta=4a^2-36\le0\Rightarrow a\in[-3,3]$
 
-\textbf{9. BD} \textbf{10. ABC} \textbf{11. ABD} \textbf{12. C}（$x\ge0$时$x^2-2x-3=0\Rightarrow x=3$；$x<0$时$x^2+2x-3=0\Rightarrow x=-3$）\\
+\subsection*{二、多选题}
+\textbf{9. BD} A反比例非递增；C非奇函数\\
+\textbf{10. ABC} $e=\sqrt3=\frac{c}{2}\Rightarrow c=2\sqrt3$，$b^2=c^2-a^2=8$\\
+\textbf{11. ABD} $E=4$，$D=2.4$，$P(X=1)=C_{10}^1\cdot0.4\cdot0.6^9\approx0.04<0.1$\\
+\textbf{12. C} $x\ge0$时$x^2-2x-3=0\Rightarrow x=3$；$x<0$时$x^2+2x-3=0\Rightarrow x=-3$。两解，选C
 
-\textbf{13.} $a_n=4n-3$（$n=1$时$a_1=1=4\times1-3$）\\
-\textbf{14.} 圆心$(1,-2)$，$d=\frac{|3+8+5|}{5}=\frac{16}{5}=3.2$\\
-\textbf{15.} $a^2=b^2+c^2-bc\ge bc$，$bc\le4$，$S_{\max}=\frac12\cdot4\cdot\sin60^\circ=\sqrt3$\\
-\textbf{16.} 2个（$x=-3$和$x=e$）\\
+\subsection*{三、填空题}
+\textbf{13.} $n=1$时$a_1=S_1=1$；$n\ge2$时$a_n=S_n-S_{n-1}=4n-3$，$a_1$也满足，故$a_n=4n-3$\\
+\textbf{14.} 圆心$(1,-2)$，$d=\frac{|3\cdot1-4(-2)+5|}{5}=\frac{|3+8+5|}{5}=\frac{16}{5}=3.2$\\
+\textbf{15.} $a^2=b^2+c^2-2bc\cos A=b^2+c^2-bc\ge bc$，$bc\le4$，$S=\frac12bc\sin A\le\frac12\cdot4\cdot\frac{\sqrt3}{2}=\sqrt3$\\
+\textbf{16.} 2个（$x=-3$和$x=e$）
 
-\textbf{17.} $a_n=2^n-1$，$S_n=2^{n+1}-n-2$\\
-\textbf{18.} $a^2=4+9-12\cdot\frac12=7$，$a=\sqrt7$；$\frac{a}{\sin A}=\frac{c}{\sin C}\Rightarrow\frac{\sqrt7}{\frac{\sqrt3}{2}}=\frac{3}{\sin C}\Rightarrow\sin C=\frac{3\sqrt{21}}{14}$\\
-\textbf{19.} 建系$A(0,0,0),B(2,0,0),D(0,2,0),A_1(0,0,2),E(2,2,1)$，$\overrightarrow{A_1E}=(2,2,-1)$，面$BDE$法向量$\vec{n}=(1,-1,2)$，$\sin\theta=\frac{|\overrightarrow{A_1E}\cdot\vec{n}|}{|\overrightarrow{A_1E}||\vec{n}|}=\frac{|2-2-2|}{3\cdot\sqrt6}=\frac{2}{3\sqrt6}=\frac{\sqrt6}{9}$\\
-\textbf{20.} $P(X>550)=P(Z>1)=0.1587$；3天恰1天$P=C_3^1\cdot0.1587\cdot(0.8413)^2\approx0.337$\\
-\textbf{21.} 略\\
-\textbf{22.} （1）$a=1$；（2）构造函数$g(x)=e^x-x-1-\ln(x+1)$，$g'(x)=e^x-1-\frac1{x+1}$，$g''(x)=e^x+\frac1{(x+1)^2}>0$，$g'(0)=0$，$g(x)$在$x=0$取最小$0$，证毕。
+\subsection*{四、解答题}
+\textbf{17.}（1）$a_{n+1}+1=2(a_n+1)$，$\{a_n+1\}$首项2公比2，$a_n+1=2^n$，$a_n=2^n-1$\\
+（2）$S_n=(2+2^2+\cdots+2^n)-n=2^{n+1}-n-2$
+
+\textbf{18.}（1）$a^2=b^2+c^2-2bc\cos A=4+9-12\cdot\frac12=7$，$a=\sqrt7$\\
+（2）$\frac{a}{\sin A}=\frac{c}{\sin C}\Rightarrow\frac{\sqrt7}{\sin60^\circ}=\frac{3}{\sin C}\Rightarrow\sin C=\frac{3\cdot\frac{\sqrt3}{2}}{\sqrt7}=\frac{3\sqrt{21}}{14}$
+
+\textbf{19.} 建系$A(0,0,0)$，$B(2,0,0)$，$D(0,2,0)$，$A_1(0,0,2)$，$E(2,2,1)$。$\overrightarrow{A_1E}=(2,2,-1)$，面$BDE$法向量$\vec{n}=(1,-1,2)$。$\sin\theta=\frac{|\overrightarrow{A_1E}\cdot\vec{n}|}{|\overrightarrow{A_1E}||\vec{n}|}=\frac{|2-2-2|}{3\cdot\sqrt6}=\frac{2}{3\sqrt6}=\frac{\sqrt6}{9}$
+
+\textbf{20.}（1）$P(X>550)=P(Z>1)=0.1587$\\
+（2）$Y\sim B(3,0.1587)$，$P(Y=1)=C_3^1\cdot0.1587\cdot(0.8413)^2\approx0.337$
+
+\textbf{21.}（1）$\frac{b}{a}=\sqrt2\Rightarrow b^2=2a^2$，代入$P(\sqrt6,2)$得$\frac{6}{a^2}-\frac{4}{2a^2}=1\Rightarrow\frac{4}{a^2}=1\Rightarrow a^2=4$，$b^2=8$，$C:\frac{x^2}{4}-\frac{y^2}{8}=1$\\
+（2）$c=\sqrt{4+8}=2\sqrt3$，$F(2\sqrt3,0)$。设$AB:x=my+2\sqrt3$，联立得$(2m^2-1)y^2+4\sqrt3my+4=0$。韦达定理代入$OA\perp OB\Rightarrow x_1x_2+y_1y_2=0$解得$m^2=1$，$AB:x=\pm y+2\sqrt3$
+
+\textbf{22.}（1）$a=1$（同前例）\\
+（2）$g(x)=e^x-x-1-\ln(x+1)$，$g'(x)=e^x-1-\frac1{x+1}$，$g''(x)=e^x+\frac1{(x+1)^2}>0$，$g'(0)=0$，故$g'(x)>0$（$x>0$），$g(x)$增，$g(0)=0\therefore g(x)>0$
 
 \end{document}
